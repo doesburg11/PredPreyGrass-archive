@@ -38,13 +38,49 @@ became clear. A fixed-genome two-point fitness sweep (`0.0` vs `1.0`) had alread
 landscape exists around this trait — the gap is in observing it emerge under evolution with too few births to sample,
 not in the mechanism being inert.
 
-## Why these three specifically
+### [`eco_evolutionary_cadence`](eco_evolutionary_cadence/) — Trial 1
+A `speed` genome that controls movement *frequency* rather than movement distance: an agent
+only gets a real move on roughly 1-in-6 steps depending on its evolved cadence. **Rejected.**
+Confirmed directly to structurally prevent a sustainable predator population regardless of
+policy quality — predators went extinct in 30/30 sampled seeds under a trained policy. The
+mechanic itself was the problem, not something tunable away. Abandoned for
+`eco_evolutionary_metabolic_rate` (kept in the main repo), which already had partial evidence
+of a working sustainability loop.
+
+### [`eco_evolutionary_cooperation`](eco_evolutionary_cooperation/) — Trial 5
+`cooperation_rate`: a heritable fraction of *that step's* catch/graze energy donated to
+same-species neighbors, founder mean 0.0 (identical to no-genome baseline, so any positive
+drift is a direct selection signal). Motivated by the Baldwin-effect/cooperation literature
+link (Suzuki & Arita; Taylor 1992's kin-competition cancellation result). **Paused after Pilot
+1, not replicated further (2026-07-18).** The neutral-drift control drifted as much as or more
+than the real run in both species; with `metabolic_rate` and `investment` already confirmed
+null via proper 3-seed replication, a full replication here would most likely have been a
+third data point confirming an already-established pattern, not new information.
+
+### [`eco_evolutionary_metabolic_code`](eco_evolutionary_metabolic_code/) — Trial 7
+A length-10 combinatorial genome (CORRECT/WRONG/PLASTIC per locus, Hinton & Nowlan 1987
+needle-in-haystack design) instead of a smooth scalar — a genuine attempt to give evolution a
+landscape that needs learning to find, per the theoretical note in the main repo's
+`predpreygrass/evolutionary/RESULTS.md`. **Complete, null — and reversed on the headline
+metric**, not merely flat. The structurally different design didn't rescue the pattern the
+smooth-scalar trials were already showing.
+
+### [`eco_evolutionary_metabolic_rate`](eco_evolutionary_metabolic_rate/) — Trial 3
+`metabolic_rate`: sub-linear energy gain vs. linear cost, creating a policy-dependent interior
+optimum. This is where the project's rigorous drift-vs-control replication methodology was
+actually built, iteration by iteration (population-ratio caps rejected as biologically
+unmotivated; a Holling-type individual satiation throttle adopted instead; a neutral-drift
+control introduced). A promising single-run read for prey **did not survive a proper 3-seed
+real-vs-control replication (Mann-Whitney U) — null for both species.**
+
+## Why these seven specifically
 
 Judged against the rest of the `eco_evolutionary_*` family (see the main repo's `predpreygrass/evolutionary/README.md`
-and `RESULTS.md`): these three reached a genuine stop with nothing positive to build on, unlike (for example)
+and `RESULTS.md`): these seven reached a genuine stop with nothing positive to build on, unlike (for example)
 `eco_evolutionary_metabolic_rate_positive_control`, which is also a null/weak result but stayed in the main repo
 because it directly informed the design of `eco_evolutionary_erl_baldwin` (the project's strongest result, p<0.00001,
-n=100/condition) — it has real stepping-stone value that these three don't.
+n=100/condition) — it has real stepping-stone value that these don't. `eco_evolutionary_erl_flagship` (closed, negative,
+but thorough) was considered and deliberately kept in the main repo rather than archived alongside these.
 
 ## Recovering full context
 
