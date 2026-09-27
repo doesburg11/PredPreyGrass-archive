@@ -11,6 +11,26 @@ before assuming there's nothing there.
 
 ## What's here
 
+### [`eco_evolutionary`](eco_evolutionary/) — the family's baseline
+The foundational scaffold every other `eco_evolutionary_*` module was cloned from: built on `lineage_rewards`'s
+lifecycle tracking (never-reused IDs, parent-child tracking, lineage logs, age limits), adding the first explicit
+heritable genome. One trait, `speed`, gates distance-1 vs. distance-2 movement, with superlinear movement cost;
+deliberately Baldwinian, not Lamarckian — the genome only affects which actions are physically possible, never the
+learned PPO policy weights themselves, which stay shared and are never copied parent-to-offspring.
+
+Across 3 documented training runs it found a real but messy, unconfirmed signal: population-density tuning mattered a
+lot (overcrowding erased any speed advantage until grass regrowth was halved and a prey age cap added); with that
+fixed, prey speed drifted up then partially reverted, predator speed showed the more persistent upward drift, and
+there's a tentative, single-run "Red Queen"-style alternating pattern (prey selection emerges once predators get
+effective, then predator selection catches up) that the module's own writeup explicitly flags as not yet a strong
+result — it needs sustained reciprocal escalation or repeated cycling across multiple seeds to be more than
+suggestive. The writeup's own conclusion recommended `eco_evolutionary_cadence` as the stronger next experiment (a
+graded movement-cooldown instead of a hard distance threshold, easier to track); that module was built next and
+promptly rejected outright (see below) — the entire documented lineage descending from this module (`cadence` →
+`metabolic_rate` → ...) is now archived here, and nothing still active in the main repo imports it, depends on it, or
+cites it as a direct clone-parent. Kept in the main repo for a while as a narrative anchor ("baseline of the family")
+even after that; archived once it was confirmed nothing still there actually depends on it.
+
 ### [`eco_evolutionary_cultural_plasticity`](eco_evolutionary_cultural_plasticity/) — Trial 8
 Gene-culture coevolution (dual inheritance): a heritable `plasticity` gene sets how readily an agent's socially-learned
 `dialect` trait tracks the local population, on the theory that a *structurally different* mechanism (not another
@@ -73,10 +93,10 @@ unmotivated; a Holling-type individual satiation throttle adopted instead; a neu
 control introduced). A promising single-run read for prey **did not survive a proper 3-seed
 real-vs-control replication (Mann-Whitney U) — null for both species.**
 
-## Why these seven specifically
+## Why these eight specifically
 
 Judged against the rest of the `eco_evolutionary_*` family (see the main repo's `predpreygrass/evolutionary/README.md`
-and `RESULTS.md`): these seven reached a genuine stop with nothing positive to build on, unlike (for example)
+and `RESULTS.md`): these eight reached a genuine stop with nothing positive to build on, unlike (for example)
 `eco_evolutionary_metabolic_rate_positive_control`, which is also a null/weak result but stayed in the main repo
 because it directly informed the design of `eco_evolutionary_erl_baldwin` (the project's strongest result, p<0.00001,
 n=100/condition) — it has real stepping-stone value that these don't. `eco_evolutionary_erl_flagship` (closed, negative,
