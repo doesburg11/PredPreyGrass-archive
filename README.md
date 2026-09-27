@@ -1,0 +1,53 @@
+# PredPreyGrass-archive
+
+Closed, dead-end experiment modules pulled out of [PredPreyGrass](https://github.com/doesburg11/PredPreyGrass) to keep
+that repo uncluttered. Each module here ran to a real conclusion — a null result, not an abandoned half-build — and is
+kept for the record: what was tried, what it found, and why it was closed. Each subdirectory keeps its own full git
+history from PredPreyGrass (via `git subtree split`) and its own README/RESULTS.md with the full numbers.
+
+This is not "code that didn't work" — the mechanisms are implemented and tested correctly; the *biological effect they
+were built to demonstrate* did not show up in training. See each module's own `RESULTS.md` for the real-seed numbers
+before assuming there's nothing there.
+
+## What's here
+
+### [`eco_evolutionary_cultural_plasticity`](eco_evolutionary_cultural_plasticity/) — Trial 8
+Gene-culture coevolution (dual inheritance): a heritable `plasticity` gene sets how readily an agent's socially-learned
+`dialect` trait tracks the local population, on the theory that a *structurally different* mechanism (not another
+single-scalar trait) might route around the flat, no-fitness-correlation pattern seen in 7 earlier single-channel trait
+trials. **Stopped early** after 3 real seeds: `plasticity_mean` stayed within about one founder-std of its starting
+value in all 3, no consistent direction, and `plasticity_repro_spearman` was essentially zero in every seed, both
+species — the same flat pattern the dual-inheritance design was meant to avoid. The ~21h neutral-control leg was not
+run once the real seeds showed no sign of a mechanism-level improvement.
+
+### [`eco_evolutionary_cultural_plasticity_seasonal`](eco_evolutionary_cultural_plasticity_seasonal/) — Trial 9
+Follow-up to Trial 8, testing Rogers' Paradox (Rogers 1988) directly: the *target* dialect flips over time (a seasonal
+cycle), so social learning should only pay off if agents can also detect that the environment has changed and it's
+worth re-learning — the condition Rogers' Paradox says social learning fails without. Seed 42 ran to completion
+(1000/1000 iterations, 2026-08-08): same flat result as Trial 8. Consistent with Rogers' Paradox actually being the
+explanation for both trials' null results, not a design flaw specific to either one. (This module's own in-tree README
+status box was never updated after that run and still says "not yet run" — trust this summary and Trial 8/9's entries
+in `predpreygrass/evolutionary/RESULTS.md` on the main repo over that stale box.)
+
+### [`eco_evolutionary_nuptial_gift`](eco_evolutionary_nuptial_gift/)
+Obligate male-provisioning: sexed predators, males give a nuptial gift to females, tested whether that changes
+reproductive dynamics. **Stopped early, 2026-08-03**, not completed. One real seed (42) ran to full completion
+(1000/1000 iterations, 15.9h): too few reproductions occurred to produce a meaningful signal. The remaining seeds and
+the neutral-control leg (planned: 3 real + 3 neutral-control seeds, ~4 more days of compute) were not run once that
+became clear. A fixed-genome two-point fitness sweep (`0.0` vs `1.0`) had already confirmed a real, dramatic fitness
+landscape exists around this trait — the gap is in observing it emerge under evolution with too few births to sample,
+not in the mechanism being inert.
+
+## Why these three specifically
+
+Judged against the rest of the `eco_evolutionary_*` family (see the main repo's `predpreygrass/evolutionary/README.md`
+and `RESULTS.md`): these three reached a genuine stop with nothing positive to build on, unlike (for example)
+`eco_evolutionary_metabolic_rate_positive_control`, which is also a null/weak result but stayed in the main repo
+because it directly informed the design of `eco_evolutionary_erl_baldwin` (the project's strongest result, p<0.00001,
+n=100/condition) — it has real stepping-stone value that these three don't.
+
+## Recovering full context
+
+Each module's own `README.md`/`RESULTS.md` here has the details. For the cross-trial narrative (how each trial's null
+result shaped the next module's design), see `predpreygrass/evolutionary/RESULTS.md` in the main PredPreyGrass repo,
+which is retained there even though the module code has moved here.
