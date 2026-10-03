@@ -1,0 +1,135 @@
+[
+  {
+    "treatment": "reinforce",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 123.5548172757475,
+    "population_end_mean": 206.66666666666666
+  },
+  {
+    "treatment": "evolution_only",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 98.3455149501661,
+    "population_end_mean": 106.66666666666667
+  },
+  {
+    "treatment": "ppo_learning_off",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 90.92137320044297,
+    "population_end_mean": 94.66666666666667
+  },
+  {
+    "treatment": "ppo_a0.002_b0.01_g0.5_r4_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 95.6201550387597,
+    "population_end_mean": 107.0
+  },
+  {
+    "treatment": "ppo_a0.002_b0.01_g0.5_r8_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 94.30343300110742,
+    "population_end_mean": 122.0
+  },
+  {
+    "treatment": "ppo_a0.002_b0.01_g0.9_r4_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 99.08859357696566,
+    "population_end_mean": 121.66666666666667
+  },
+  {
+    "treatment": "ppo_a0.002_b0.01_g0.9_r8_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 81.9922480620155,
+    "population_end_mean": 84.66666666666667
+  },
+  {
+    "treatment": "ppo_a0.002_b0.05_g0.5_r4_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 98.6157253599114,
+    "population_end_mean": 117.33333333333333
+  },
+  {
+    "treatment": "ppo_a0.002_b0.05_g0.5_r8_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 94.95348837209302,
+    "population_end_mean": 121.66666666666667
+  },
+  {
+    "treatment": "ppo_a0.002_b0.05_g0.9_r4_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 92.02990033222592,
+    "population_end_mean": 98.33333333333333
+  },
+  {
+    "treatment": "ppo_a0.002_b0.05_g0.9_r8_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 91.2624584717608,
+    "population_end_mean": 105.66666666666667
+  },
+  {
+    "treatment": "ppo_a0.01_b0.01_g0.5_r4_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 113.03322259136213,
+    "population_end_mean": 170.33333333333334
+  },
+  {
+    "treatment": "ppo_a0.01_b0.01_g0.5_r8_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 104.55813953488372,
+    "population_end_mean": 99.66666666666667
+  },
+  {
+    "treatment": "ppo_a0.01_b0.01_g0.9_r4_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 117.35880398671095,
+    "population_end_mean": 153.33333333333334
+  },
+  {
+    "treatment": "ppo_a0.01_b0.01_g0.9_r8_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 102.05537098560355,
+    "population_end_mean": 132.0
+  },
+  {
+    "treatment": "ppo_a0.01_b0.05_g0.5_r4_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 99.19822812846068,
+    "population_end_mean": 119.0
+  },
+  {
+    "treatment": "ppo_a0.01_b0.05_g0.5_r8_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 109.92580287929125,
+    "population_end_mean": 139.0
+  },
+  {
+    "treatment": "ppo_a0.01_b0.05_g0.9_r4_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 101.03211517165006,
+    "population_end_mean": 125.66666666666667
+  },
+  {
+    "treatment": "ppo_a0.01_b0.05_g0.9_r8_e4",
+    "n": 3,
+    "extinctions": 0,
+    "population_mean_mean": 100.7563676633444,
+    "population_end_mean": 113.0
+  }
+]

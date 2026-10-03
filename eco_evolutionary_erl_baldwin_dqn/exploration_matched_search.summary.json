@@ -1,0 +1,272 @@
+[
+  {
+    "treatment": "reinforce",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 199.66666666666666,
+    "population_mean_mean": 133.53377630121815,
+    "population_peak_mean": 212.33333333333334,
+    "carnivore_peak_mean": 20.333333333333332
+  },
+  {
+    "treatment": "evolution_only",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 156.33333333333334,
+    "population_mean_mean": 110.11960132890364,
+    "population_peak_mean": 164.66666666666666,
+    "carnivore_peak_mean": 16.333333333333332
+  },
+  {
+    "treatment": "dqn_learning_off_e0.75",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 316.3333333333333,
+    "population_mean_mean": 154.25359911406423,
+    "population_peak_mean": 317.0,
+    "carnivore_peak_mean": 14.333333333333334
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g0.5_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 357.6666666666667,
+    "population_mean_mean": 179.66777408637873,
+    "population_peak_mean": 359.3333333333333,
+    "carnivore_peak_mean": 24.333333333333332
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g0.5_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 352.0,
+    "population_mean_mean": 176.35991140642304,
+    "population_peak_mean": 356.3333333333333,
+    "carnivore_peak_mean": 20.666666666666668
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g0.5_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 353.3333333333333,
+    "population_mean_mean": 180.83831672203766,
+    "population_peak_mean": 364.6666666666667,
+    "carnivore_peak_mean": 21.666666666666668
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g0.9_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 300.0,
+    "population_mean_mean": 175.01993355481727,
+    "population_peak_mean": 313.6666666666667,
+    "carnivore_peak_mean": 22.0
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g0.9_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 292.6666666666667,
+    "population_mean_mean": 173.859357696567,
+    "population_peak_mean": 313.6666666666667,
+    "carnivore_peak_mean": 24.0
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g0.9_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 339.6666666666667,
+    "population_mean_mean": 179.14174972314507,
+    "population_peak_mean": 342.0,
+    "carnivore_peak_mean": 30.333333333333332
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g1_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 357.0,
+    "population_mean_mean": 175.4717607973422,
+    "population_peak_mean": 363.6666666666667,
+    "carnivore_peak_mean": 30.333333333333332
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g1_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 409.3333333333333,
+    "population_mean_mean": 180.24141749723148,
+    "population_peak_mean": 409.3333333333333,
+    "carnivore_peak_mean": 23.666666666666668
+  },
+  {
+    "treatment": "dqn_a0.005_e0.75_g1_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 300.6666666666667,
+    "population_mean_mean": 167.19822812846067,
+    "population_peak_mean": 318.6666666666667,
+    "carnivore_peak_mean": 26.0
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g0.5_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 375.3333333333333,
+    "population_mean_mean": 172.93466223698783,
+    "population_peak_mean": 375.3333333333333,
+    "carnivore_peak_mean": 15.333333333333334
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g0.5_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 355.6666666666667,
+    "population_mean_mean": 173.8970099667774,
+    "population_peak_mean": 364.0,
+    "carnivore_peak_mean": 26.0
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g0.5_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 384.6666666666667,
+    "population_mean_mean": 187.4108527131783,
+    "population_peak_mean": 387.6666666666667,
+    "carnivore_peak_mean": 32.666666666666664
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g0.9_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 407.0,
+    "population_mean_mean": 201.5393133997785,
+    "population_peak_mean": 407.6666666666667,
+    "carnivore_peak_mean": 32.666666666666664
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g0.9_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 532.6666666666666,
+    "population_mean_mean": 217.3953488372093,
+    "population_peak_mean": 534.0,
+    "carnivore_peak_mean": 23.333333333333332
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g0.9_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 370.6666666666667,
+    "population_mean_mean": 181.88704318936877,
+    "population_peak_mean": 370.6666666666667,
+    "carnivore_peak_mean": 19.666666666666668
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g1_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 277.0,
+    "population_mean_mean": 157.62126245847176,
+    "population_peak_mean": 285.3333333333333,
+    "carnivore_peak_mean": 33.666666666666664
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g1_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 268.3333333333333,
+    "population_mean_mean": 160.03986710963454,
+    "population_peak_mean": 275.6666666666667,
+    "carnivore_peak_mean": 27.0
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_g1_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 357.0,
+    "population_mean_mean": 195.66334440753045,
+    "population_peak_mean": 360.0,
+    "carnivore_peak_mean": 22.333333333333332
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g0.5_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 546.3333333333334,
+    "population_mean_mean": 226.6345514950166,
+    "population_peak_mean": 550.3333333333334,
+    "carnivore_peak_mean": 41.0
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g0.5_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 550.6666666666666,
+    "population_mean_mean": 224.86046511627907,
+    "population_peak_mean": 550.6666666666666,
+    "carnivore_peak_mean": 36.333333333333336
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g0.5_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 487.3333333333333,
+    "population_mean_mean": 210.25802879291248,
+    "population_peak_mean": 487.3333333333333,
+    "carnivore_peak_mean": 31.0
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g0.9_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 450.3333333333333,
+    "population_mean_mean": 210.11184939091913,
+    "population_peak_mean": 451.6666666666667,
+    "carnivore_peak_mean": 40.666666666666664
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g0.9_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 353.6666666666667,
+    "population_mean_mean": 169.5448504983389,
+    "population_peak_mean": 357.6666666666667,
+    "carnivore_peak_mean": 32.0
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g0.9_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 468.6666666666667,
+    "population_mean_mean": 198.46954595791806,
+    "population_peak_mean": 468.6666666666667,
+    "carnivore_peak_mean": 24.666666666666668
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g1_t5",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 511.0,
+    "population_mean_mean": 221.13289036544847,
+    "population_peak_mean": 512.6666666666666,
+    "carnivore_peak_mean": 30.666666666666668
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g1_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 431.3333333333333,
+    "population_mean_mean": 186.09966777408636,
+    "population_peak_mean": 433.6666666666667,
+    "carnivore_peak_mean": 16.0
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g1_t50",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 421.6666666666667,
+    "population_mean_mean": 195.82613510520488,
+    "population_peak_mean": 427.6666666666667,
+    "carnivore_peak_mean": 28.0
+  }
+]

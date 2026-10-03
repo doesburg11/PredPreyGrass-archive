@@ -1,0 +1,29 @@
+[
+  {
+    "treatment": "reinforce",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 93.33333333333333,
+    "population_mean_mean": 162.0495390425414,
+    "population_peak_mean": 549.6666666666666,
+    "carnivore_peak_mean": 118.33333333333333
+  },
+  {
+    "treatment": "evolution_only",
+    "n": 3,
+    "extinctions": 2,
+    "population_end_mean": 256.0,
+    "population_mean_mean": 105.2279240253249,
+    "population_peak_mean": 379.6666666666667,
+    "carnivore_peak_mean": 50.333333333333336
+  },
+  {
+    "treatment": "dqn_a0.02_e0.75_t10",
+    "n": 3,
+    "extinctions": 0,
+    "population_end_mean": 179.0,
+    "population_mean_mean": 287.23147839609015,
+    "population_peak_mean": 801.0,
+    "carnivore_peak_mean": 119.66666666666667
+  }
+]

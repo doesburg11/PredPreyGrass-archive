@@ -1,0 +1,30 @@
+[
+  {
+    "treatment": "reinforce",
+    "n": 8,
+    "extinctions": 0,
+    "population_mean_mean": 100.56478405315615,
+    "population_end_mean": 138.625
+  },
+  {
+    "treatment": "evolution_only",
+    "n": 8,
+    "extinctions": 0,
+    "population_mean_mean": 98.07931893687707,
+    "population_end_mean": 106.625
+  },
+  {
+    "treatment": "ppo_learning_off",
+    "n": 8,
+    "extinctions": 0,
+    "population_mean_mean": 86.2358803986711,
+    "population_end_mean": 92.0
+  },
+  {
+    "treatment": "ppo_a0.01_b0.01_g0.5_r4_e4",
+    "n": 8,
+    "extinctions": 0,
+    "population_mean_mean": 111.51162790697674,
+    "population_end_mean": 137.375
+  }
+]

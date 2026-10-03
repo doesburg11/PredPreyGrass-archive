@@ -1,15 +1,44 @@
 # PredPreyGrass-archive
 
-Closed, dead-end experiment modules pulled out of [PredPreyGrass](https://github.com/doesburg11/PredPreyGrass) to keep
-that repo uncluttered. Each module here ran to a real conclusion — a null result, not an abandoned half-build — and is
-kept for the record: what was tried, what it found, and why it was closed. Each subdirectory keeps its own full git
-history from PredPreyGrass (via `git subtree split`) and its own README/RESULTS.md with the full numbers.
+Closed or discontinued experiment modules pulled out of
+[PredPreyGrass](https://github.com/doesburg11/PredPreyGrass) to keep that repo
+uncluttered. Each is kept for the record: what was tried, what it found, and why
+it was stopped. Some reached replicated null conclusions; others stopped at an
+earlier falsification or feasibility gate. The original archive set was
+transferred with per-module history via `git subtree split`. Later additions
+retain their available source, tests, documentation, and recorded result
+artifacts; DQN and PPO entered this archive directly from uncommitted source-repo
+work, so their provenance is the archive commit that adds them rather than prior
+source-repository commits.
 
-This is not "code that didn't work" — the mechanisms are implemented and tested correctly; the *biological effect they
-were built to demonstrate* did not show up in training. See each module's own `RESULTS.md` for the real-seed numbers
-before assuming there's nothing there.
+This is not simply "code that didn't work": the mechanisms were implemented and
+tested, while the effects or feasibility conditions they were built to examine
+did not clear their respective gates. Consult each module's README and, where
+present, `RESULTS.md` before interpreting its status.
 
 ## What's here
+
+### ERL Baldwin alternative lifetime learners (closed 2026-10-03)
+
+Five replacements for the positive ERL Baldwin experiment's existing
+REINFORCE-style lifetime update were implemented and tested. All preserve the
+Darwinian/Baldwinian boundary: acquired parameters remain private to one life
+and reproduction copies only the genome. None produced a reproducible
+learning-specific advantage, so the original learner remains the only validated
+option. The consolidated comparison is in the main repository's
+[`eco_evolutionary_erl_baldwin/README.md`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/eco_evolutionary_erl_baldwin/README.md#comparative-lifetime-learning-investigation-closed-2026-10-03).
+
+These five packages reuse the active baseline ERL Baldwin world. To rerun them,
+install the main `PredPreyGrass` project in the Python environment, run commands
+from this archive repository's root, and use the top-level package names shown
+in each archived README/RESULTS file (for example,
+`python -m eco_evolutionary_erl_baldwin_ppo.calibrate_ppo ...`).
+
+- [`eco_evolutionary_erl_baldwin_hebbian`](eco_evolutionary_erl_baldwin_hebbian/) — reward-modulated Hebbian plasticity; failed the controlled single-lifetime gate, including the uniform-positive-alpha control.
+- [`eco_evolutionary_erl_baldwin_sarsa`](eco_evolutionary_erl_baldwin_sarsa/) — linear SARSA; failed the prospective 10-seed safety gate with 4/10 extinctions versus 0/10 for REINFORCE.
+- [`eco_evolutionary_erl_baldwin_actor_critic`](eco_evolutionary_erl_baldwin_actor_critic/) — linear TD actor-critic; significantly underperformed REINFORCE on the held-out block.
+- [`eco_evolutionary_erl_baldwin_dqn`](eco_evolutionary_erl_baldwin_dqn/) — linear Double DQN with replay and target network; stable, but unable to beat its exploration-matched learning-off control reliably.
+- [`eco_evolutionary_erl_baldwin_ppo`](eco_evolutionary_erl_baldwin_ppo/) — lifetime-private clipped PPO; a near-signal in the first untouched block failed independent replication.
 
 ### [`eco_evolutionary`](eco_evolutionary/) — the family's baseline
 The foundational scaffold every other `eco_evolutionary_*` module was cloned from: built on `lineage_rewards`'s
@@ -108,10 +137,10 @@ finding pure drift (unbiased random walk) in all 24 real+control seed/species tr
 across both rounds. Closed as the last data point in the single-continuous-scalar-trait family
 to be settled, with no exception surviving replication after all.
 
-## Why these nine specifically
+## Why these fourteen specifically
 
 Judged against the rest of the `eco_evolutionary_*` family (see the main repo's `predpreygrass/evolutionary/README.md`
-and `RESULTS.md`): these nine reached a genuine stop with nothing positive to build on, unlike (for example)
+and `RESULTS.md`): these fourteen reached a genuine stop with nothing positive to build on, unlike (for example)
 `eco_evolutionary_metabolic_rate_positive_control`, which is also a null/weak result but stayed in the main repo
 because it directly informed the design of `eco_evolutionary_erl_baldwin` (the project's strongest result, p<0.00001,
 n=100/condition) — it has real stepping-stone value that these don't. `eco_evolutionary_erl_flagship` (closed, negative,

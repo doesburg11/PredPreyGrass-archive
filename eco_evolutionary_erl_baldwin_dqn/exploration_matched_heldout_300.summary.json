@@ -1,0 +1,38 @@
+[
+  {
+    "treatment": "reinforce",
+    "n": 8,
+    "extinctions": 0,
+    "population_end_mean": 173.25,
+    "population_mean_mean": 126.27200996677743,
+    "population_peak_mean": 195.125,
+    "carnivore_peak_mean": 14.0
+  },
+  {
+    "treatment": "evolution_only",
+    "n": 8,
+    "extinctions": 0,
+    "population_end_mean": 163.0,
+    "population_mean_mean": 120.35423588039868,
+    "population_peak_mean": 191.625,
+    "carnivore_peak_mean": 16.875
+  },
+  {
+    "treatment": "dqn_learning_off_e0.75",
+    "n": 8,
+    "extinctions": 0,
+    "population_end_mean": 328.25,
+    "population_mean_mean": 176.77117940199335,
+    "population_peak_mean": 337.5,
+    "carnivore_peak_mean": 30.25
+  },
+  {
+    "treatment": "dqn_a0.05_e0.75_g0.5_t5",
+    "n": 8,
+    "extinctions": 0,
+    "population_end_mean": 378.625,
+    "population_mean_mean": 177.54775747508305,
+    "population_peak_mean": 381.625,
+    "carnivore_peak_mean": 30.375
+  }
+]
