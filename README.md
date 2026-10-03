@@ -93,10 +93,25 @@ unmotivated; a Holling-type individual satiation throttle adopted instead; a neu
 control introduced). A promising single-run read for prey **did not survive a proper 3-seed
 real-vs-control replication (Mann-Whitney U) — null for both species.**
 
-## Why these eight specifically
+### [`eco_evolutionary_investment`](eco_evolutionary_investment/) — Trial 6
+`offspring_investment_fraction`: how much energy a parent hands each offspring at birth — a
+real tradeoff curve (R6 confirmed a genuine fixed-genome fitness landscape exists, ruling out
+"there's no signal to detect" as the null explanation). Went through more replication rounds
+than any other trait in the family precisely because it kept looking like the one real
+exception: R9's population-scaled run found prey's 3-vs-3 real-vs-control separation hit the
+exact statistical ceiling n=3 can produce (U=9, p=0.050) while predator stayed null — directly
+suggestive, not yet confirmed. **R10 extended prey to n=6 (3 more real + 3 more control seeds)
+specifically to settle that question, and it reversed instead of strengthening**: p moved from
+0.050 up to 0.120, the textbook signature of a small-sample artifact rather than a real,
+merely-underpowered effect. An independent Hunt (2006) full-trajectory model-fit agreed,
+finding pure drift (unbiased random walk) in all 24 real+control seed/species trajectories
+across both rounds. Closed as the last data point in the single-continuous-scalar-trait family
+to be settled, with no exception surviving replication after all.
+
+## Why these nine specifically
 
 Judged against the rest of the `eco_evolutionary_*` family (see the main repo's `predpreygrass/evolutionary/README.md`
-and `RESULTS.md`): these eight reached a genuine stop with nothing positive to build on, unlike (for example)
+and `RESULTS.md`): these nine reached a genuine stop with nothing positive to build on, unlike (for example)
 `eco_evolutionary_metabolic_rate_positive_control`, which is also a null/weak result but stayed in the main repo
 because it directly informed the design of `eco_evolutionary_erl_baldwin` (the project's strongest result, p<0.00001,
 n=100/condition) — it has real stepping-stone value that these don't. `eco_evolutionary_erl_flagship` (closed, negative,
