@@ -18,6 +18,17 @@ present, `RESULTS.md` before interpreting its status.
 
 ## What's here
 
+### [`eco_evolutionary_erl_flagship`](eco_evolutionary_erl_flagship/) — Trial 13 (archived 2026-10-03)
+
+Hand-designed cautious rewards beat reckless rewards (9/10 competitions) and
+sparse reproduction reward (27/30, p=0.000008), but evolution did not reliably
+discover them: reward weights were indistinguishable from neutral drift.
+Stronger pooled learning reached the extreme region in only 3/30 populations;
+population scaling did not improve that (0/10). Closed without a dependable
+route to autonomous discovery, while preserving the positive reward-design
+finding. See the module README for evidence, provenance, and rerun dependencies.
+
+
 ### ERL Baldwin alternative lifetime learners (closed 2026-10-03)
 
 Five replacements for the positive ERL Baldwin experiment's existing
@@ -137,14 +148,12 @@ finding pure drift (unbiased random walk) in all 24 real+control seed/species tr
 across both rounds. Closed as the last data point in the single-continuous-scalar-trait family
 to be settled, with no exception surviving replication after all.
 
-## Why these fourteen specifically
+## Why these modules are archived
 
-Judged against the rest of the `eco_evolutionary_*` family (see the main repo's `predpreygrass/evolutionary/README.md`
-and `RESULTS.md`): these fourteen reached a genuine stop with nothing positive to build on, unlike (for example)
-`eco_evolutionary_metabolic_rate_positive_control`, which is also a null/weak result but stayed in the main repo
-because it directly informed the design of `eco_evolutionary_erl_baldwin` (the project's strongest result, p<0.00001,
-n=100/condition) — it has real stepping-stone value that these don't. `eco_evolutionary_erl_flagship` (closed, negative,
-but thorough) was considered and deliberately kept in the main repo rather than archived alongside these.
+The archive includes concluded nulls, failed feasibility gates, and discontinued
+investigations. Flagship retains a positive reward-design result, but its
+independent evolutionary-discovery objective reached no dependable remedy.
+The positive ERL Baldwin and coevolution modules remain in the main repository.
 
 ## Recovering full context
 
