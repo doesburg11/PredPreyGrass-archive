@@ -1,0 +1,309 @@
+{
+  "moves": [
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CADENCE_2026-07-05_13-32-12",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cadence/runs/PPO_ECO_EVOLUTION_CADENCE_2026-07-05_13-32-12"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CADENCE_2026-07-05_15-27-06",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cadence/runs/PPO_ECO_EVOLUTION_CADENCE_2026-07-05_15-27-06"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_COOPERATION_2026-07-17_11-13-48",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cooperation/runs/PPO_ECO_EVOLUTION_COOPERATION_2026-07-17_11-13-48"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_COOPERATION_NEUTRAL_CONTROL_2026-07-17_18-23-39",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cooperation/runs/PPO_ECO_EVOLUTION_COOPERATION_NEUTRAL_CONTROL_2026-07-17_18-23-39"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_2026-08-07_17-15-53",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_2026-08-07_17-15-53"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_NEUTRAL_CONTROL_SEED42_2026-08-04_13-17-06",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_NEUTRAL_CONTROL_SEED42_2026-08-04_13-17-06"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED1_2026-08-03_12-22-31",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED1_2026-08-03_12-22-31"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED1_2026-08-07_17-30-40",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED1_2026-08-07_17-30-40"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED2_2026-08-07_19-40-21",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED2_2026-08-07_19-40-21"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED42_2026-08-03_16-31-26",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED42_2026-08-03_16-31-26"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED42_2026-08-08_15-08-21",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED42_2026-08-08_15-08-21"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED43_2026-08-04_00-02-25",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED43_2026-08-04_00-02-25"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED44_2026-08-04_07-00-24",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_cultural_plasticity/runs/PPO_ECO_EVOLUTION_CULTURAL_PLASTICITY_SEED44_2026-08-04_07-00-24"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_2026-07-14_23-17-11",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_2026-07-14_23-17-11"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_2026-07-15_08-32-43",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_2026-07-15_08-32-43"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_FIXED015_2026-07-15_19-50-54",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_FIXED015_2026-07-15_19-50-54"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_FIXED015_2026-07-15_19-52-09",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_FIXED015_2026-07-15_19-52-09"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_FIXED025_2026-07-15_20-56-26",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_FIXED025_2026-07-15_20-56-26"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_FIXED035_2026-07-15_21-42-46",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_FIXED035_2026-07-15_21-42-46"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_FIXED055_2026-07-15_22-29-26",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_FIXED055_2026-07-15_22-29-26"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_FIXED070_2026-07-15_23-04-06",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_FIXED070_2026-07-15_23-04-06"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_NEUTRAL_CONTROL_SEED42_2026-07-17_03-38-39",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_NEUTRAL_CONTROL_SEED42_2026-07-17_03-38-39"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_NEUTRAL_CONTROL_SEED43_2026-07-17_10-11-10",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_NEUTRAL_CONTROL_SEED43_2026-07-17_10-11-10"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_NEUTRAL_CONTROL_SEED44_2026-07-17_17-19-10",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_NEUTRAL_CONTROL_SEED44_2026-07-17_17-19-10"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED42_2026-07-22_01-05-52",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED42_2026-07-22_01-05-52"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED43_2026-07-22_18-00-30",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED43_2026-07-22_18-00-30"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED44_2026-07-23_22-37-44",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED44_2026-07-23_22-37-44"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED45_2026-09-30_13-01-28",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED45_2026-09-30_13-01-28"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED46_2026-10-01_17-26-28",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED46_2026-10-01_17-26-28"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED47_2026-10-02_13-06-06",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED47_2026-10-02_13-06-06"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED42_2026-07-18_18-23-53",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED42_2026-07-18_18-23-53"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED43_2026-07-20_16-03-03",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED43_2026-07-20_16-03-03"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED44_2026-07-21_08-44-26",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED44_2026-07-21_08-44-26"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED45_2026-09-27_20-17-52",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED45_2026-09-27_20-17-52"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED45_2026-09-27_20-18-57",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED45_2026-09-27_20-18-57"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED46_2026-09-28_14-20-23",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED46_2026-09-28_14-20-23"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED47_2026-09-29_12-24-58",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED47_2026-09-29_12-24-58"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SEED42_2026-07-16_10-14-20",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SEED42_2026-07-16_10-14-20"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SEED43_2026-07-16_15-57-22",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SEED43_2026-07-16_15-57-22"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_INVESTMENT_SEED44_2026-07-16_21-30-54",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_investment/runs/PPO_ECO_EVOLUTION_INVESTMENT_SEED44_2026-07-16_21-30-54"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_CODE_NEUTRAL_CONTROL_SEED42_2026-07-24_23-53-28",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_code/runs/PPO_ECO_EVOLUTION_METABOLIC_CODE_NEUTRAL_CONTROL_SEED42_2026-07-24_23-53-28"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_CODE_NEUTRAL_CONTROL_SEED43_2026-07-25_15-17-43",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_code/runs/PPO_ECO_EVOLUTION_METABOLIC_CODE_NEUTRAL_CONTROL_SEED43_2026-07-25_15-17-43"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_CODE_NEUTRAL_CONTROL_SEED44_2026-07-26_02-12-10",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_code/runs/PPO_ECO_EVOLUTION_METABOLIC_CODE_NEUTRAL_CONTROL_SEED44_2026-07-26_02-12-10"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_CODE_SEED42_2026-07-24_18-17-27",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_code/runs/PPO_ECO_EVOLUTION_METABOLIC_CODE_SEED42_2026-07-24_18-17-27"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_CODE_SEED43_2026-07-25_10-00-42",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_code/runs/PPO_ECO_EVOLUTION_METABOLIC_CODE_SEED43_2026-07-25_10-00-42"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_CODE_SEED44_2026-07-25_20-29-34",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_code/runs/PPO_ECO_EVOLUTION_METABOLIC_CODE_SEED44_2026-07-25_20-29-34"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_2026-06-28_15-14-26",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_2026-06-28_15-14-26"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_2026-07-05_21-16-40",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_2026-07-05_21-16-40"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_2026-07-06_12-11-02",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_2026-07-06_12-11-02"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_2026-07-07_09-54-25",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_2026-07-07_09-54-25"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_2026-07-08_03-41-51",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_2026-07-08_03-41-51"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED42_2026-07-10_20-10-31",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED42_2026-07-10_20-10-31"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED42_2026-07-13_21-44-49",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED42_2026-07-13_21-44-49"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED43_2026-07-11_04-53-22",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED43_2026-07-11_04-53-22"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED43_2026-07-14_06-37-27",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED43_2026-07-14_06-37-27"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED44_2026-07-12_12-10-24",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED44_2026-07-12_12-10-24"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED44_2026-07-14_14-42-32",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED44_2026-07-14_14-42-32"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED42_2026-07-09_18-52-10",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED42_2026-07-09_18-52-10"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED42_2026-07-12_21-15-12",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED42_2026-07-12_21-15-12"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED43_2026-07-10_03-33-40",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED43_2026-07-10_03-33-40"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED43_2026-07-13_05-00-41",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED43_2026-07-13_05-00-41"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED44_2026-07-10_11-54-15",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED44_2026-07-10_11-54-15"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED44_2026-07-13_13-31-49",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_metabolic_rate/runs/PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED44_2026-07-13_13-31-49"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_2026-08-01_23-06-38",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_2026-08-01_23-06-38"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.0_2026-08-01_17-10-16",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.0_2026-08-01_17-10-16"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.0_2026-08-01_20-44-42",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.0_2026-08-01_20-44-42"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.0_2026-08-01_20-53-01",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.0_2026-08-01_20-53-01"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.25_2026-08-01_17-51-51",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.25_2026-08-01_17-51-51"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.5_2026-08-01_18-33-29",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.5_2026-08-01_18-33-29"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.75_2026-08-01_19-16-19",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED0.75_2026-08-01_19-16-19"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED1.0_2026-08-01_19-57-23",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED1.0_2026-08-01_19-57-23"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED1.0_2026-08-01_20-51-16",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED1.0_2026-08-01_20-51-16"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED1.0_2026-08-01_21-40-30",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED1.0_2026-08-01_21-40-30"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_SEED42_2026-08-02_02-10-29",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_SEED42_2026-08-02_02-10-29"
+    },
+    {
+      "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_SEED43_2026-08-03_02-01-38",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_SEED43_2026-08-03_02-01-38"
+    }
+  ],
+  "unmatched": [
+    "DQN_Leibo2017_Wolfpack_2026-09-04_13-29-47",
+    "DQN_Leibo2017_Wolfpack_updates20_10000iter_2026-09-04_02-12-09",
+    "PPO_2026-06-18_13-20-56"
+  ]
+}

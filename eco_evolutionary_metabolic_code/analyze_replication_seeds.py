@@ -16,7 +16,7 @@ from a neutral center), so the Mann-Whitney test here is one-sided on the raw
 values (real < control for mean_wrong_loci; real > control for fraction_solved),
 not on |deviation from founder|.
 
-Expects experiment directories under ~/simulation_results/ray_results/ named:
+Expects experiment directories under eco_evolutionary_metabolic_code/runs/ named:
   PPO_ECO_EVOLUTION_METABOLIC_CODE_SEED<seed>_<timestamp>                (real)
   PPO_ECO_EVOLUTION_METABOLIC_CODE_NEUTRAL_CONTROL_SEED<seed>_<timestamp> (control)
 
@@ -40,7 +40,10 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import mannwhitneyu
 
-from predpreygrass.global_config import RAY_RESULTS_DIR
+try:
+    from eco_evolutionary_metabolic_code.run_paths import RAY_RESULTS_DIR
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR  # Support direct script execution.
 FOUNDER_MEAN_WRONG_LOCI = 3.0  # L=10 * p_wrong=0.3, see config_env_eco_evolutionary.py
 
 REAL_PATTERN = re.compile(r"^PPO_ECO_EVOLUTION_METABOLIC_CODE_SEED(\d+)_")

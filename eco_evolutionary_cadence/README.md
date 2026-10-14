@@ -311,3 +311,16 @@ genome → speed trait → continuous move rate → accumulator-gated lifetime m
        → policy learns speed-specific behaviour with action-masked frozen steps
        → survival/reproduction → inherited genome with mutation
 ```
+
+## Local run data
+
+Ray experiment output for this module is stored in [`runs/`](runs/),
+or `eco_evolutionary_cadence/runs/` relative to the archive repository root.
+Training, resume, analysis, and evaluation scripts use this module-local
+path through [`run_paths.py`](run_paths.py).
+
+This directory contains 2 associated experiment folders moved into the archive.
+Evaluation defaults to the newest standard-treatment run with an available
+policy checkpoint. To evaluate a control, fixed-trait, scaled, or specific
+historical run, set the evaluator’s checkpoint override to a path relative
+to this `runs/` directory. Run data is ignored by Git.

@@ -4,7 +4,7 @@ neutral-drift-control runs and compare male_donation_rate drift magnitude
 between the two groups, mirroring eco_evolutionary_investment's R7
 methodology.
 
-Expects experiment directories under ~/simulation_results/ray_results/ named:
+Expects experiment directories under eco_evolutionary_nuptial_gift/runs/ named:
   PPO_ECO_EVOLUTION_NUPTIAL_GIFT_SEED<seed>_<timestamp>                (real)
   PPO_ECO_EVOLUTION_NUPTIAL_GIFT_NEUTRAL_CONTROL_SEED<seed>_<timestamp> (control)
 
@@ -35,7 +35,10 @@ import numpy as np
 from scipy.stats import mannwhitneyu
 
 from predpreygrass.evolutionary.model_selection import report_hunt_fits
-from predpreygrass.global_config import RAY_RESULTS_DIR
+try:
+    from eco_evolutionary_nuptial_gift.run_paths import RAY_RESULTS_DIR
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR  # Support direct script execution.
 FOUNDER_MEAN = 0.0
 
 REAL_PATTERN = re.compile(r"^PPO_ECO_EVOLUTION_NUPTIAL_GIFT_SEED(\d+)_")

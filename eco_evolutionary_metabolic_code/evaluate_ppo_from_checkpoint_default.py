@@ -14,8 +14,11 @@ from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.config.config_en
 from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.utils.pygame_grid_renderer_rllib import PyGameRenderer
 
 # ==== CONFIG ====
-RAY_RESULTS_DIR = "/home/doesburg/Projects/PredPreyGrass/predpreygrass/rllib_termination/experiments/"
-CHECKPOINT_PATH = "legacy/checkpoints_2025_11_01/checkpoint_000004"
+try:
+    from eco_evolutionary_metabolic_code.run_paths import RAY_RESULTS_DIR, latest_checkpoint
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR, latest_checkpoint  # Support direct script execution.
+CHECKPOINT_PATH = None  # Set a path relative to runs to choose a specific checkpoint.
 
 SAVE_MOVIE = False
 MOVIE_FILENAME = "eval_video.mp4"
@@ -55,7 +58,7 @@ if __name__ == "__main__":
     register_env("PredPreyGrass", lambda config: PredPreyGrass(config))
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    checkpoint_root = os.path.join(RAY_RESULTS_DIR, CHECKPOINT_PATH)
+    checkpoint_root = str(RAY_RESULTS_DIR / CHECKPOINT_PATH) if CHECKPOINT_PATH else str(latest_checkpoint())
     rl_modules = load_rl_modules(checkpoint_root)
 
     env = PredPreyGrass(config=config_env)

@@ -323,3 +323,16 @@ python -m pytest -q predpreygrass/evolutionary/eco_evolutionary_nuptial_gift/tes
 - Hinton, G. E. & Nowlan, S. J. (1987). *How Learning Can Guide Evolution.* Complex Systems,
   1(3), 495-502 — see `predpreygrass/evolutionary/RESULTS.md` for how this motivates the
   obligate-vs-smooth design choice made here.
+
+## Local run data
+
+Ray experiment output for this module is stored in [`runs/`](runs/),
+or `eco_evolutionary_nuptial_gift/runs/` relative to the archive repository root.
+Training, resume, analysis, and evaluation scripts use this module-local
+path through [`run_paths.py`](run_paths.py).
+
+This directory contains 12 associated experiment folders moved into the archive.
+Evaluation defaults to the newest standard-treatment run with an available
+policy checkpoint. To evaluate a control, fixed-trait, scaled, or specific
+historical run, set the evaluator’s checkpoint override to a path relative
+to this `runs/` directory. Run data is ignored by Git.

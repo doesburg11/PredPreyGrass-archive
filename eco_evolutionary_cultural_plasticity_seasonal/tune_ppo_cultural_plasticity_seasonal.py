@@ -13,7 +13,7 @@ genuine per-individual lifetime process, independent of the shared PPO policy
 that governs movement/hunting behavior -- the plasticity gene has leverage
 over how fast that process runs, not over behavior directly.
 
-Checkpoints and a copy of the environment source are saved under ~/simulation_results/ray_results/
+Checkpoints and a copy of the environment source are saved under eco_evolutionary_cultural_plasticity_seasonal/runs/
 for provenance. Genome-trait statistics are logged to TensorBoard via the
 EpisodeReturn callback.
 """
@@ -35,7 +35,10 @@ from pathlib import Path
 import json
 import shutil
 from typing import Any
-from predpreygrass.global_config import RAY_RESULTS_DIR
+try:
+    from eco_evolutionary_cultural_plasticity_seasonal.run_paths import RAY_RESULTS_DIR
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR  # Support direct script execution.
 
 
 def parse_args():

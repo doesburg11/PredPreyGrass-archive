@@ -44,11 +44,11 @@ SAVE_MOVIE = False
 MOVIE_FILENAME = "simulation.mp4"
 MOVIE_FPS = 10
 
-from predpreygrass.global_config import RAY_RESULTS_DIR
-CHECKPOINT_ROOT = (
-    "PPO_ECO_EVOLUTION_2026-06-23_10-30-31/"
-    "PPO_PredPreyGrass_cc36a_00000_0_2026-06-23_10-30-31"
-)
+try:
+    from eco_evolutionary_metabolic_code.run_paths import RAY_RESULTS_DIR, latest_checkpoint
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR, latest_checkpoint  # Support direct script execution.
+CHECKPOINT_ROOT = None  # Set a run/trial path relative to runs to choose a specific run.
 
 
 def env_creator(config):
@@ -144,8 +144,11 @@ def policy_pi(observation, policy_module, deterministic=True):
 
 
 def setup_environment_and_visualizer(now):
-    run_path = os.path.join(RAY_RESULTS_DIR, CHECKPOINT_ROOT)
-    checkpoint_path = _latest_checkpoint_path(run_path)
+    if CHECKPOINT_ROOT:
+        run_path = os.path.join(RAY_RESULTS_DIR, CHECKPOINT_ROOT)
+        checkpoint_path = _latest_checkpoint_path(run_path)
+    else:
+        checkpoint_path = str(latest_checkpoint())
     checkpoint_dir = os.path.basename(checkpoint_path)
     print(f"Loading checkpoint: {checkpoint_path}")
     # training_dir = os.path.dirname(checkpoint_path)

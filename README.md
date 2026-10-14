@@ -160,3 +160,27 @@ The positive ERL Baldwin and coevolution modules remain in the main repository.
 Each module's own `README.md`/`RESULTS.md` here has the details. For the cross-trial narrative (how each trial's null
 result shaped the next module's design), see `predpreygrass/evolutionary/RESULTS.md` in the main PredPreyGrass repo,
 which is retained there even though the module code has moved here.
+
+## Local Ray runs
+
+Associated Ray experiments live in each module’s local
+[`runs/`](eco_evolutionary_investment/runs/) directory (`<module>/runs/` from
+the repository root). Training, resume, and analysis scripts use that local
+directory. Evaluation defaults to the newest standard-treatment experiment with
+an available RLlib module checkpoint; control, fixed-trait, and scaled runs must
+be selected explicitly using the evaluator’s checkpoint override. Existing
+PredPreyGrass runtime dependencies are still required. Run data is ignored by
+Git; `runs-migration.json` records the 75 moves and three unmatched directories
+left at their original location.
+
+| Module | Local runs | Associated experiment folders |
+| --- | --- | ---: |
+| `eco_evolutionary` | [`eco_evolutionary/runs/`](eco_evolutionary/runs/) | 0 |
+| `eco_evolutionary_cadence` | [`eco_evolutionary_cadence/runs/`](eco_evolutionary_cadence/runs/) | 2 |
+| `eco_evolutionary_cooperation` | [`eco_evolutionary_cooperation/runs/`](eco_evolutionary_cooperation/runs/) | 2 |
+| `eco_evolutionary_cultural_plasticity` | [`eco_evolutionary_cultural_plasticity/runs/`](eco_evolutionary_cultural_plasticity/runs/) | 9 |
+| `eco_evolutionary_cultural_plasticity_seasonal` | [`eco_evolutionary_cultural_plasticity_seasonal/runs/`](eco_evolutionary_cultural_plasticity_seasonal/runs/) | 0 |
+| `eco_evolutionary_investment` | [`eco_evolutionary_investment/runs/`](eco_evolutionary_investment/runs/) | 27 |
+| `eco_evolutionary_metabolic_code` | [`eco_evolutionary_metabolic_code/runs/`](eco_evolutionary_metabolic_code/runs/) | 6 |
+| `eco_evolutionary_metabolic_rate` | [`eco_evolutionary_metabolic_rate/runs/`](eco_evolutionary_metabolic_rate/runs/) | 17 |
+| `eco_evolutionary_nuptial_gift` | [`eco_evolutionary_nuptial_gift/runs/`](eco_evolutionary_nuptial_gift/runs/) | 12 |

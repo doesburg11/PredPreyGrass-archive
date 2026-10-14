@@ -20,7 +20,10 @@ from pathlib import Path
 import json
 import shutil
 from typing import Any
-from predpreygrass.global_config import RAY_RESULTS_DIR
+try:
+    from eco_evolutionary.run_paths import RAY_RESULTS_DIR
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR  # Support direct script execution.
 
 
 def get_config_ppo():
@@ -55,7 +58,6 @@ if __name__ == "__main__":
 
     register_env("PredPreyGrass", env_creator)
 
-    # ray_results_dir = "~/Dropbox/02_marl_results/predpreygrass_results/ray_results/"
     ray_results_dir = RAY_RESULTS_DIR
     ray_results_path = Path(ray_results_dir).expanduser()
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")

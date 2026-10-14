@@ -394,3 +394,16 @@ has something to select on.
   gate never opens, the genome is never selected.
 - `offspring_count_mean` stays near zero — reproduction never happens, the
   Darwinian layer is effectively switched off.
+
+## Local run data
+
+Ray experiment output for this module is stored in [`runs/`](runs/),
+or `eco_evolutionary_investment/runs/` relative to the archive repository root.
+Training, resume, analysis, and evaluation scripts use this module-local
+path through [`run_paths.py`](run_paths.py).
+
+This directory contains 27 associated experiment folders moved into the archive.
+Evaluation defaults to the newest standard-treatment run with an available
+policy checkpoint. To evaluate a control, fixed-trait, scaled, or specific
+historical run, set the evaluator’s checkpoint override to a path relative
+to this `runs/` directory. Run data is ignored by Git.

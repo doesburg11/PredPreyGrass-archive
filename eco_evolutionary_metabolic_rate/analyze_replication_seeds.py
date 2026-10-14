@@ -3,7 +3,7 @@ Iteration 5 analysis: aggregate multi-seed replication runs (real satiation-
 throttle config vs. neutral-drift control) and compare metabolic_rate drift
 magnitude between the two groups.
 
-Expects experiment directories under ~/simulation_results/ray_results/ named:
+Expects experiment directories under eco_evolutionary_metabolic_rate/runs/ named:
   PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED<seed>_<timestamp>                (real)
   PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED<seed>_<timestamp> (control)
 
@@ -28,7 +28,10 @@ import numpy as np
 from scipy.stats import mannwhitneyu
 
 from predpreygrass.evolutionary.model_selection import report_hunt_fits
-from predpreygrass.global_config import RAY_RESULTS_DIR
+try:
+    from eco_evolutionary_metabolic_rate.run_paths import RAY_RESULTS_DIR
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR  # Support direct script execution.
 FOUNDER_MEAN = 1.0
 
 REAL_PATTERN = re.compile(r"^PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED(\d+)_")

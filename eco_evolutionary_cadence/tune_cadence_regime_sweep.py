@@ -7,7 +7,7 @@ speed should drift above the founder distribution without saturating near 1.0.
 Examples:
     python -m predpreygrass.evolutionary.eco_evolutionary_cadence.tune_cadence_regime_sweep
     CADENCE_SWEEP_ITERS=40 python -m predpreygrass.evolutionary.eco_evolutionary_cadence.tune_cadence_regime_sweep
-    python -m predpreygrass.evolutionary.eco_evolutionary_cadence.tune_cadence_regime_sweep --summarize ~/simulation_results/ray_results/PPO_CADENCE_REGIME_SWEEP_...
+    python -m predpreygrass.evolutionary.eco_evolutionary_cadence.tune_cadence_regime_sweep --summarize eco_evolutionary_cadence/runs/PPO_CADENCE_REGIME_SWEEP_...
 """
 
 from __future__ import annotations
@@ -33,7 +33,10 @@ from predpreygrass.evolutionary.eco_evolutionary_cadence.predpreygrass_rllib_env
 from predpreygrass.evolutionary.eco_evolutionary_cadence.tune_ppo import get_config_ppo, policy_mapping_fn
 from predpreygrass.evolutionary.eco_evolutionary_cadence.utils.episode_return_callback import EpisodeReturn
 from predpreygrass.evolutionary.eco_evolutionary_cadence.utils.networks import build_multi_module_spec
-from predpreygrass.global_config import RAY_RESULTS_DIR
+try:
+    from eco_evolutionary_cadence.run_paths import RAY_RESULTS_DIR
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR  # Support direct script execution.
 
 
 SOFT_REGIMES: list[dict[str, float | str]] = [

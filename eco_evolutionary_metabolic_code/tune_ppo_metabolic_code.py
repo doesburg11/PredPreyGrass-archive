@@ -11,7 +11,7 @@ that agent's own lifetime -- a genuine per-individual lifetime-search "learning"
 channel, independent of the shared PPO policy that governs movement/hunting
 behavior. A solved genome multiplies energy gain from that step onward.
 
-Checkpoints and a copy of the environment source are saved under ~/simulation_results/ray_results/
+Checkpoints and a copy of the environment source are saved under eco_evolutionary_metabolic_code/runs/
 for provenance. Genome-trait statistics are logged to TensorBoard via the
 EpisodeReturn callback.
 """
@@ -33,7 +33,10 @@ from pathlib import Path
 import json
 import shutil
 from typing import Any
-from predpreygrass.global_config import RAY_RESULTS_DIR
+try:
+    from eco_evolutionary_metabolic_code.run_paths import RAY_RESULTS_DIR
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR  # Support direct script execution.
 
 
 def parse_args():

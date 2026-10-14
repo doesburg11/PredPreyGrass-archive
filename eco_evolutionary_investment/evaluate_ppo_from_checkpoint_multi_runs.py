@@ -1,3 +1,7 @@
+try:
+    from eco_evolutionary_investment.run_paths import RAY_RESULTS_DIR, latest_checkpoint
+except ModuleNotFoundError:
+    from run_paths import RAY_RESULTS_DIR, latest_checkpoint  # Support direct script execution.
 from predpreygrass.evolutionary.eco_evolutionary_investment.predpreygrass_rllib_env import PredPreyGrass
 from predpreygrass.evolutionary.eco_evolutionary_investment.config.config_env_eco_evolutionary import config_env
 from predpreygrass.evolutionary.eco_evolutionary_investment.utils.matplot_renderer import CombinedEvolutionVisualizer
@@ -35,11 +39,10 @@ def policy_pi(observation, policy_module, deterministic=True):
     return torch.argmax(logits, dim=-1).item() if deterministic else torch.distributions.Categorical(logits=logits).sample().item()
 
 
+CHECKPOINT_PATH = None  # Set a checkpoint path relative to runs to override the default.
+
 def setup_modules():
-    ray_results_dir = "/home/doesburg/Dropbox/02_marl_results/predpreygrass_results/ray_results/"
-    checkpoint_path = "v2_7_tune_default_benchmark/PPO_PredPreyGrass_86337_00000_0_2025-08-04_23-53-58/"
-    checkpoint_dir = "checkpoint_000099"
-    checkpoint_root = os.path.abspath(ray_results_dir + checkpoint_path + checkpoint_dir)
+    checkpoint_root = str(RAY_RESULTS_DIR / CHECKPOINT_PATH) if CHECKPOINT_PATH else str(latest_checkpoint())
     rl_module_dir = os.path.join(checkpoint_root, "learner_group", "learner", "rl_module")
     module_paths = {
         pid: os.path.join(rl_module_dir, pid)
