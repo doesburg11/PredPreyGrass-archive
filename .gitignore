@@ -1,2 +1,6 @@
 # Simulation output directories in any module.
 runs/
+
+# Generated Python bytecode.
+__pycache__/
+*.py[cod]
