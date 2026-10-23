@@ -2,9 +2,9 @@
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms import measure_predators as mp
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import FIXES, PredPreyGrassContinuous
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.tests.test_measure_swarms import Uniform
+from foraging_swarms import measure_predators as mp
+from foraging_swarms.environment import FIXES, PredPreyGrassContinuous
+from foraging_swarms.tests.test_measure_swarms import Uniform
 
 WORLD = dict(FIXES, predator_count=12, prey_count=40, max_time_steps=1200)
 

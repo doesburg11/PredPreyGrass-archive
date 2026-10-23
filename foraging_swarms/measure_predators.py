@@ -47,7 +47,7 @@ nothing rewards group hunting directly.
 Every number is written to analysis/results/<label>.json and .txt. Usage,
 from the repository root:
 
-    python -m predpreygrass.non_evolutionary.continuous_space.foraging_swarms.measure_predators \\
+    python -m foraging_swarms.measure_predators \\
         <checkpoint> <label> [--episodes 50] [--seed 0] [--workers 25]
 """
 
@@ -67,22 +67,22 @@ for _variable in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS"):
 import numpy as np
 import torch
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.checkpoints import (
+from foraging_swarms.checkpoints import (
     checkpoint_env_config,
     load_modules,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import (
+from foraging_swarms.environment import (
     DIRECTIONS,
     SPEEDS,
     PredPreyGrassContinuous,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.geometry import Vector
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.measure_swarms import (
+from foraging_swarms.geometry import Vector
+from foraging_swarms.measure_swarms import (
     MIN_AGE,
     layout,
     sample_actions,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.tournament import classify
+from foraging_swarms.tournament import classify
 
 HERE = Path(__file__).resolve().parent
 ENCOUNTER = 64.0  # prey this close at the start of a decision: an encounter

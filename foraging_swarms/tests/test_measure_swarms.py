@@ -7,8 +7,8 @@ import pytest
 import torch
 from ray.rllib.core.columns import Columns
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms import measure_swarms as ms
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import (
+from foraging_swarms import measure_swarms as ms
+from foraging_swarms.environment import (
     DIRECTIONS,
     FIXES,
     SPEEDS,

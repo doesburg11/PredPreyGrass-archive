@@ -5,13 +5,13 @@ animal's energy to each slot. Defaults are covered by test_regression."""
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import (
+from foraging_swarms.environment import (
     FIXES,
     SELF_SIZE,
     SLOT_SIZE,
     PredPreyGrassContinuous,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.geometry import Vector
+from foraging_swarms.geometry import Vector
 
 STOP = 32
 ASSIST = dict(FIXES, capture_assist_radius=64.0, capture_assist_threshold=5.0, observe_energy_in_slots=True)
@@ -93,9 +93,9 @@ def test_validation(key, bad):
 
 
 def test_measurements_run_with_energy_slots():
-    from predpreygrass.non_evolutionary.continuous_space.foraging_swarms import measure_predators as mp
-    from predpreygrass.non_evolutionary.continuous_space.foraging_swarms import measure_swarms as ms
-    from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.tests.test_measure_swarms import Uniform
+    from foraging_swarms import measure_predators as mp
+    from foraging_swarms import measure_swarms as ms
+    from foraging_swarms.tests.test_measure_swarms import Uniform
 
     env = PredPreyGrassContinuous(dict(ASSIST, predator_count=12, prey_count=40, max_time_steps=800))
     modules = {"predator": Uniform(), "prey": Uniform()}
@@ -129,7 +129,7 @@ def test_no_stale_helpers_across_physics_steps():
 
 
 def test_warm_start_checkpoints_exist():
-    from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.launchers.launch import WARM_START
+    from foraging_swarms.launchers.launch import WARM_START
 
     for path in WARM_START.values():
         assert path.is_dir(), path

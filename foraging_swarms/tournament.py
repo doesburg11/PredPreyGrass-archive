@@ -20,11 +20,11 @@ in training.
 
 Usage (from foraging_swarms/):
 
-    python tournament.py runs/<run>
-    python tournament.py runs/<run> --every 100 --episodes 20
-    python tournament.py runs/<run> --iterations 50,200,380
-    python tournament.py runs/<run> --prey-iteration 290  # fixed prey
-    python tournament.py runs/<run1> runs/<run2> --every 300  # continued runs
+    python -m foraging_swarms.tournament foraging_swarms/runs/<run>
+    python -m foraging_swarms.tournament foraging_swarms/runs/<run> --every 100 --episodes 20
+    python -m foraging_swarms.tournament foraging_swarms/runs/<run> --iterations 50,200,380
+    python -m foraging_swarms.tournament foraging_swarms/runs/<run> --prey-iteration 290  # fixed prey
+    python -m foraging_swarms.tournament foraging_swarms/runs/<run1> runs/<run2> --every 300  # continued runs
 
 Several run directories are treated as one continuous training, for runs
 started from the previous run's final checkpoint (init_checkpoint): their
@@ -48,7 +48,7 @@ from pathlib import Path
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.checkpoints import checkpoint_env_config, load_module
+from foraging_swarms.checkpoints import checkpoint_env_config, load_module
 
 SPECIES = ("predator", "prey")
 CATCH_RISK = "prey caught per prey per 1000 physics steps"
@@ -147,7 +147,7 @@ def _module(species, iteration):
 
 
 def _env():
-    from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import PredPreyGrassContinuous
+    from foraging_swarms.environment import PredPreyGrassContinuous
 
     if _worker["env"] is None:
         _worker["env"] = PredPreyGrassContinuous(dict(_worker["env_config"]))

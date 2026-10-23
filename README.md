@@ -18,6 +18,26 @@ present, `RESULTS.md` before interpreting its status.
 
 ## What's here
 
+### [`foraging_swarms`](foraging_swarms/) — learned cooperation in the continuous world (archived 2026-10-23)
+
+A search for emergent swarming and cooperative hunting in the continuous
+Predator-Prey-Grass world, following Hahn et al. (2020) *Foraging swarms*: no
+reward for flocking or cooperation, prey and predators trained with shared
+PPO. Five tests, each with a control for behaviour imposed by the world:
+prey that could not see other prey grouped *more* (no social foraging);
+predators showed no restraint; a second predator lowered the focal
+predator's catch probability in counterfactual replays (competition, not
+group hunting); the gain from a shared-carcass rule and the coexistence
+gain from large prey needing two predators were matched by untrained
+policies under the same rule. No evidence of learned cooperation. The
+measurement tools (counterfactual replay with placebo, untrained-policy
+control, swarm metrics, Kaplan-Meier persistence) are reusable for later
+cooperation claims. Write-up: [Searching for Emergent Cooperation](https://humanbehaviorpatterns.org/learning-selection-interaction/predpreygrass-continuous/emergent-cooperation).
+Moved with its history (`git subtree split`). Run from this repository's root
+with the main `PredPreyGrass` project installed (`predpreygrass.training`,
+and the K/W warm starts read `base_environment_continuous` runs there), e.g.
+`python -m foraging_swarms.measure_swarms ...`.
+
 ### [`eco_evolutionary_erl_flagship`](eco_evolutionary_erl_flagship/) — Trial 13 (archived 2026-10-03)
 
 Hand-designed cautious rewards beat reckless rewards (9/10 competitions) and
@@ -154,6 +174,8 @@ The archive includes concluded nulls, failed feasibility gates, and discontinued
 investigations. Flagship retains a positive reward-design result, but its
 independent evolutionary-discovery objective reached no dependable remedy.
 The positive ERL Baldwin and coevolution modules remain in the main repository.
+`foraging_swarms` is a non-evolutionary module (shared PPO only) archived as a
+controlled null.
 
 ## Recovering full context
 
@@ -170,7 +192,7 @@ directory. Evaluation defaults to the newest standard-treatment experiment with
 an available RLlib module checkpoint; control, fixed-trait, and scaled runs must
 be selected explicitly using the evaluator’s checkpoint override. Existing
 PredPreyGrass runtime dependencies are still required. Run data is ignored by
-Git; `runs-migration.json` records the 75 moves and three unmatched directories
+Git; `runs-migration.json` records the 76 moves and three unmatched directories
 left at their original location.
 
 | Module | Local runs | Associated experiment folders |
@@ -184,3 +206,4 @@ left at their original location.
 | `eco_evolutionary_metabolic_code` | [`eco_evolutionary_metabolic_code/runs/`](eco_evolutionary_metabolic_code/runs/) | 6 |
 | `eco_evolutionary_metabolic_rate` | [`eco_evolutionary_metabolic_rate/runs/`](eco_evolutionary_metabolic_rate/runs/) | 17 |
 | `eco_evolutionary_nuptial_gift` | [`eco_evolutionary_nuptial_gift/runs/`](eco_evolutionary_nuptial_gift/runs/) | 12 |
+| `foraging_swarms` | [`foraging_swarms/runs/`](foraging_swarms/runs/) | 14 |

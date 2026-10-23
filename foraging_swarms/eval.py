@@ -3,7 +3,7 @@
 Settings come from config/config_eval.py; edit it, then run from the
 repository root (no command-line arguments):
 
-    python predpreygrass/non_evolutionary/continuous_space/foraging_swarms/eval.py
+    python -m foraging_swarms.eval
 
 source "checkpoint" loads each species' policy from a checkpoint and samples
 actions as in training (stochastic=True) or takes the argmax; "random"
@@ -21,10 +21,10 @@ import numpy as np
 import torch
 from ray.rllib.core.columns import Columns
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.checkpoints import SPECIES, checkpoint_env_config, load_modules
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.config.config_env import config_env
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.config.config_eval import config_eval
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import PredPreyGrassContinuous
+from foraging_swarms.checkpoints import SPECIES, checkpoint_env_config, load_modules
+from foraging_swarms.config.config_env import config_env
+from foraging_swarms.config.config_eval import config_eval
+from foraging_swarms.environment import PredPreyGrassContinuous
 
 SOURCES = ("checkpoint", "random")
 RENDERS = ("window", "video", "none")
@@ -117,7 +117,7 @@ def main():
     env = PredPreyGrassContinuous(env_config)
     viewer = None
     if args.render != "none":
-        from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.render import Viewer
+        from foraging_swarms.render import Viewer
 
         viewer = Viewer(
             env,

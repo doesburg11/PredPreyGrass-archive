@@ -299,6 +299,11 @@
     {
       "source": "/home/doesburg/simulation_results/ray_results/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_SEED43_2026-08-03_02-01-38",
       "destination": "/home/doesburg/Projects/PredPreyGrass-archive/eco_evolutionary_nuptial_gift/runs/PPO_ECO_EVOLUTION_NUPTIAL_GIFT_SEED43_2026-08-03_02-01-38"
+    },
+    {
+      "source": "/home/doesburg/Projects/PredPreyGrass/predpreygrass/non_evolutionary/continuous_space/foraging_swarms/runs",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/foraging_swarms/runs",
+      "note": "whole runs/ folder moved 2026-10-23 (14 experiment folders, aborted_3000iter/, logs/); analysis/results/*.json still record the old paths"
     }
   ],
   "unmatched": [

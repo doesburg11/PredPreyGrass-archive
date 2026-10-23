@@ -10,13 +10,13 @@ import pytest
 from predpreygrass.non_evolutionary.continuous_space.base_environment_continuous.environment import (
     PredPreyGrassContinuous as BaseEnvironment,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import (
+from foraging_swarms.environment import (
     FIXES,
     SELF_SIZE,
     SLOT_SIZE,
     PredPreyGrassContinuous,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.measure_swarms import (
+from foraging_swarms.measure_swarms import (
     layout,
     rotate_conspecific_velocities,
 )

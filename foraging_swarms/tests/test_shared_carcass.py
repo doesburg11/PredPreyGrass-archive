@@ -3,8 +3,8 @@ and the predators within the radius; 0 keeps the catcher-takes-all rule."""
 
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import FIXES, PredPreyGrassContinuous
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.geometry import Vector
+from foraging_swarms.environment import FIXES, PredPreyGrassContinuous
+from foraging_swarms.geometry import Vector
 
 STOP = 32  # speed index 2: stand still
 
@@ -89,8 +89,8 @@ def test_catch_log_is_cleared_at_the_next_decision_and_reset():
 
 def test_counterfactual_fed_outcome_under_sharing():
     """A bystander within the radius is fed from a catch it did not make."""
-    from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.counterfactual_hunting import rollout
-    from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.tests.test_measure_swarms import Uniform
+    from foraging_swarms.counterfactual_hunting import rollout
+    from foraging_swarms.tests.test_measure_swarms import Uniform
 
     for radius, expected in ((96.0, ["predator_0", "predator_1"]), (0.0, ["predator_0"])):
         env = PredPreyGrassContinuous(dict(FIXES, predator_count=3, prey_count=2, energy_catch_share_radius=radius))

@@ -29,7 +29,7 @@ training), in parallel, and records for each species:
 Every number is also written to a JSON file. Usage, from the repository
 root:
 
-    python -m predpreygrass.non_evolutionary.continuous_space.foraging_swarms.measure_swarms \\
+    python -m foraging_swarms.measure_swarms \\
         <checkpoint> <label> [--episodes 50] [--seed 0] [--workers 25] \\
         [--override '{"prey_observe_neighbor_movement": false}']
 
@@ -53,19 +53,19 @@ for _variable in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS"):
 import numpy as np
 import torch
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms import swarm_metrics as sm
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.checkpoints import (
+from foraging_swarms import swarm_metrics as sm
+from foraging_swarms.checkpoints import (
     SPECIES,
     checkpoint_env_config,
     load_modules,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import (
+from foraging_swarms.environment import (
     DIRECTIONS,
     SELF_SIZE,
     SPEEDS,
     PredPreyGrassContinuous,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.tournament import classify
+from foraging_swarms.tournament import classify
 
 HERE = Path(__file__).resolve().parent
 MIN_AGE = 10  # decisions: newborns start with a fixed velocity next to their parent

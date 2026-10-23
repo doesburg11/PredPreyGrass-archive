@@ -1,6 +1,10 @@
 """Train one condition of the foraging-swarm comparison (README, "Stage 2").
 
-    python predpreygrass/non_evolutionary/continuous_space/foraging_swarms/launchers/launch.py <condition> <seed>
+    python -m foraging_swarms.launchers.launch <condition> <seed>
+
+run from the PredPreyGrass-archive root with the main PredPreyGrass project
+installed (train.py uses predpreygrass.training; K and W warm-start from its
+base_environment_continuous runs).
 
 Conditions (prey manipulated first; predators keep full information):
     A   own species seen with positions and velocities (as BE-04 and BE-05)
@@ -23,13 +27,14 @@ checkpoints (README, "Stage 2"). Long runs (about 9.5 hours):
 start them with systemd-run --user so they survive the session, e.g.
 
     systemd-run --user --unit=sw-B-1 --working-directory=$PWD \\
-        .conda/bin/python predpreygrass/.../launchers/launch.py B 1
+        <python> -m foraging_swarms.launchers.launch B 1
 """
 import sys
 from pathlib import Path
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms import train
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.config.config_ppo import RUNS_DIR
+import predpreygrass
+from foraging_swarms import train
+from foraging_swarms.config.config_ppo import RUNS_DIR
 
 ITERATIONS = 2000
 
@@ -56,7 +61,11 @@ CONDITIONS = {
 # Conditions that start from trained policies (weights only: optimizer,
 # iteration count and outputs start fresh) and train WARM_ITERATIONS more:
 # seed 1 from BE-04, seed 2 from BE-05, both at iteration 2,000.
-_BE_RUNS = Path(__file__).resolve().parents[2] / "base_environment_continuous" / "runs"
+# In the main PredPreyGrass repository (this module was archived 2026-10-23).
+_BE_RUNS = (
+    Path(predpreygrass.__file__).resolve().parent
+    / "non_evolutionary" / "continuous_space" / "base_environment_continuous" / "runs"
+)
 WARM_START = {
     1: _BE_RUNS / "base_environment_continuous_2026-10-14_21-35-19_937331" / "checkpoint" / "iter_002000",
     2: _BE_RUNS / "base_environment_continuous_2026-10-14_21-35-40_020808" / "checkpoint" / "iter_002000",

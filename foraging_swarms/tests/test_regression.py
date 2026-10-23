@@ -18,14 +18,14 @@ import pytest
 
 HERE = Path(__file__).resolve().parent
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.tests.compare import (
+from foraging_swarms.tests.compare import (
     CASES,
     count_events,
     digest,
     random_actions,
     snapshot,
 )
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import PredPreyGrassContinuous
+from foraging_swarms.environment import PredPreyGrassContinuous
 
 FIXTURE = json.loads((HERE / "data" / "reference_digests.json").read_text())
 

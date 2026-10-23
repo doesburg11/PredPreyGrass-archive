@@ -11,7 +11,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.geometry import Torus, Vector
+from foraging_swarms.geometry import Torus, Vector
 
 
 @dataclass

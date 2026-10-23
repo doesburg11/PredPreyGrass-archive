@@ -2,11 +2,11 @@
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms import counterfactual_hunting as ch
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import FIXES, PredPreyGrassContinuous
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.geometry import Vector
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.measure_predators import intended_velocity, toward
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.tests.test_measure_swarms import Uniform
+from foraging_swarms import counterfactual_hunting as ch
+from foraging_swarms.environment import FIXES, PredPreyGrassContinuous
+from foraging_swarms.geometry import Vector
+from foraging_swarms.measure_predators import intended_velocity, toward
+from foraging_swarms.tests.test_measure_swarms import Uniform
 
 WORLD = dict(FIXES, predator_count=15, prey_count=60, max_time_steps=1600)
 

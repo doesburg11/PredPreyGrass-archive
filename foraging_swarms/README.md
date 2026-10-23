@@ -1,5 +1,7 @@
 # foraging_swarms
 
+> **Archived 2026-10-23** from PredPreyGrass (`predpreygrass/non_evolutionary/continuous_space/foraging_swarms/`): closed with no evidence of learned cooperation. Commands below run from the PredPreyGrass-archive root with the main PredPreyGrass project installed. Saved analysis results still name the old run paths.
+
 **Question.** Can predators and prey develop collective movement out of
 individual self-interest, with no reward for cooperation and no built-in
 Boids rules? And do they use what they see of their own species to find
@@ -129,7 +131,7 @@ hand-made configurations (`tests/test_swarm_metrics.py`). For each species:
   so the numbers compare with BE-01 to BE-05).
 
 ```bash
-python -m predpreygrass.non_evolutionary.continuous_space.foraging_swarms.measure_swarms \
+python -m foraging_swarms.measure_swarms \
     <checkpoint> <label> [--episodes 50] [--override '{"prey_observe_neighbor_movement": false}']
 ```
 
@@ -297,9 +299,9 @@ did:
 
 ```bash
 systemd-run --user --unit=sw-lane1 --working-directory=$PWD \
-    bash predpreygrass/non_evolutionary/continuous_space/foraging_swarms/launchers/queue_stage2.sh "B 1" "C 2" "B 3"
+    bash foraging_swarms/launchers/queue_stage2.sh "B 1" "C 2" "B 3"
 systemd-run --user --unit=sw-lane2 --working-directory=$PWD \
-    bash predpreygrass/non_evolutionary/continuous_space/foraging_swarms/launchers/queue_stage2.sh "C 1" "B 2" "C 3"
+    bash foraging_swarms/launchers/queue_stage2.sh "C 1" "B 2" "C 3"
 ```
 
 Progress is in `runs/logs/queue.log` and `runs/logs/train_*.log`. A run

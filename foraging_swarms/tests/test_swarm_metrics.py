@@ -5,7 +5,7 @@ import math
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms import swarm_metrics as sm
+from foraging_swarms import swarm_metrics as sm
 
 W = H = 800.0
 

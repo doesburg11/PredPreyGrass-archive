@@ -10,7 +10,7 @@ import json
 import pickle
 from pathlib import Path
 
-from predpreygrass.non_evolutionary.continuous_space.foraging_swarms.environment import (
+from foraging_swarms.environment import (
     DEFAULT_CONFIG,
     PredPreyGrassContinuous,
 )
