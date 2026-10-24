@@ -3,9 +3,9 @@
 from dataclasses import dataclass,field
 import numpy as np
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.genome import crossover,founder_genome,mutate
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.networks import action_probs,evaluate,sample_action
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.world import Agent,ErlWorld as BaselineWorld,N_ACTIONS
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.genome import crossover,founder_genome,mutate
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.networks import action_probs,evaluate,sample_action
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.world import Agent,ErlWorld as BaselineWorld,N_ACTIONS
 from .networks import ppo_update
 
 LEARNING_STRATEGIES=frozenset(("ERL","L","ERLC","ERLK","ERLS"))

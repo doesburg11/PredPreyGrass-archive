@@ -2,7 +2,7 @@
 
 from copy import deepcopy
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.config import config_erl as _baseline_config
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.config import config_erl as _baseline_config
 
 
 config_actor_critic = deepcopy(_baseline_config)

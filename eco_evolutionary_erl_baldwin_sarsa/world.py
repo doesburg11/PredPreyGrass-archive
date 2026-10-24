@@ -11,13 +11,13 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.genome import (
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.genome import (
     crossover,
     founder_genome,
     mutate,
 )
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.networks import evaluate
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.world import (
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.networks import evaluate
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.world import (
     Agent,
     ErlWorld as BaselineWorld,
     N_ACTIONS,

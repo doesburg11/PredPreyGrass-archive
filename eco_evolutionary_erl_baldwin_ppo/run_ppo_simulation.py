@@ -1,5 +1,5 @@
 """Run lifetime PPO through the baseline simulation CLI."""
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin import run_erl_simulation as runner
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin import run_erl_simulation as runner
 from .config import config_ppo
 from .world import PpoWorld
 

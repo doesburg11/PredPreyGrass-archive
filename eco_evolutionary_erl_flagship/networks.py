@@ -7,7 +7,7 @@ nothing in them is specific to Trial 12's 7-channel/4-action setup, so they appl
 verbatim here with obs_dim=8, n_actions=9 (see features.py, config.py).
 """
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.networks import (  # noqa: F401
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.networks import (  # noqa: F401
     action_probs,
     evaluate,
     reinforce_update,

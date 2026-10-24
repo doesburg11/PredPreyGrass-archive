@@ -23,7 +23,7 @@ inherits unchanged).
 For the ORIGINAL module's full results (the ERL result itself, and the
 C/ERLC, K/ERLK, S/ERLS dead-end diagnoses this fork's README explicitly flags
 as inherited-but-not-re-verified under Hebbian plasticity), see
-`https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/eco_evolutionary_erl_baldwin/RESULTS.md`.
+`https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/discrete_space/eco_evolutionary_erl_baldwin/RESULTS.md`.
 
 ## Uniform-positive-alpha control
 

@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.networks import action_probs
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.networks import action_probs
 
 
 def state_value(obs, weights, bias):

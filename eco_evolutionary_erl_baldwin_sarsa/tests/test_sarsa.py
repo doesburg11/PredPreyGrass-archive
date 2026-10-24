@@ -1,11 +1,11 @@
 import numpy as np
 import pytest
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.checkpoint import (
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.checkpoint import (
     load_checkpoint,
     save_checkpoint,
 )
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin import run_erl_simulation
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin import run_erl_simulation
 
 from eco_evolutionary_erl_baldwin_sarsa.config import config_sarsa
 from eco_evolutionary_erl_baldwin_sarsa.networks import (

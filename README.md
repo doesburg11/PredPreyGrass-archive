@@ -57,7 +57,7 @@ Darwinian/Baldwinian boundary: acquired parameters remain private to one life
 and reproduction copies only the genome. None produced a reproducible
 learning-specific advantage, so the original learner remains the only validated
 option. The consolidated comparison is in the main repository's
-[`eco_evolutionary_erl_baldwin/README.md`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/eco_evolutionary_erl_baldwin/README.md#comparative-lifetime-learning-investigation-closed-2026-10-03).
+[`eco_evolutionary_erl_baldwin/README.md`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/discrete_space/eco_evolutionary_erl_baldwin/README.md#comparative-lifetime-learning-investigation-closed-2026-10-03).
 
 These five packages reuse the active baseline ERL Baldwin world. To rerun them,
 install the main `PredPreyGrass` project in the Python environment, run commands

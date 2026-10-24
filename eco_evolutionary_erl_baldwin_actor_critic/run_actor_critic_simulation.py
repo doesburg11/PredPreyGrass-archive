@@ -1,6 +1,6 @@
 """Run the actor-critic Baldwin variant using the baseline CLI."""
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin import run_erl_simulation as runner
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin import run_erl_simulation as runner
 from eco_evolutionary_erl_baldwin_actor_critic.config import config_actor_critic
 from eco_evolutionary_erl_baldwin_actor_critic.world import ActorCriticWorld
 

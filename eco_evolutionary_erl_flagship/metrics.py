@@ -12,7 +12,7 @@ used by run_trial13_simulation.py. Import directly from erl_baldwin if a future
 stage needs it.
 """
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.metrics import (  # noqa: F401
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.metrics import (  # noqa: F401
     CsvLogger,
     lineage_fieldnames,
     lineage_record,

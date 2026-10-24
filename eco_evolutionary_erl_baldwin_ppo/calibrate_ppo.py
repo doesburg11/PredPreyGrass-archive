@@ -2,8 +2,8 @@
 import argparse,csv,json
 from pathlib import Path
 import numpy as np
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.config import config_erl as base_cfg
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.world import ErlWorld as BaseWorld
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.config import config_erl as base_cfg
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.world import ErlWorld as BaseWorld
 from .config import config_ppo
 from .world import PpoWorld
 

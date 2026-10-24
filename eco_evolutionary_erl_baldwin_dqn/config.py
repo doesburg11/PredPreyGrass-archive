@@ -1,7 +1,7 @@
 """Configuration for the lifetime linear DQN Baldwin variant."""
 
 from copy import deepcopy
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.config import config_erl as _baseline
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.config import config_erl as _baseline
 
 config_dqn = deepcopy(_baseline)
 config_dqn.update({

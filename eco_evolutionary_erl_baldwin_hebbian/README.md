@@ -204,7 +204,7 @@ channels (prey's predator-detection) ever show the same pattern.
 
 An earlier version of this module ran the ERL mechanism on top of this
 project's own simpler predator-prey-grass ecology instead of Ackley &
-Littman's actual World AL. After a comparative-study run (see https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/eco_evolutionary_erl_baldwin/RESULTS.md)
+Littman's actual World AL. After a comparative-study run (see https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/discrete_space/eco_evolutionary_erl_baldwin/RESULTS.md)
 came out only partially consistent with the paper and left an open question
 about whether that was scale or a world/mechanics difference, the world was
 rebuilt to match their described mechanics directly, not this project's ecology.

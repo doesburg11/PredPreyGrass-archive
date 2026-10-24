@@ -7,8 +7,8 @@ from pathlib import Path
 
 import numpy as np
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.config import config_erl as baseline_config
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.world import ErlWorld as ReinforceWorld
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.config import config_erl as baseline_config
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.world import ErlWorld as ReinforceWorld
 from eco_evolutionary_erl_baldwin_actor_critic.config import config_actor_critic
 from eco_evolutionary_erl_baldwin_actor_critic.world import ActorCriticWorld
 

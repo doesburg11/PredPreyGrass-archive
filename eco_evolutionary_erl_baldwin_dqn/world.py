@@ -4,9 +4,9 @@ from collections import deque
 from dataclasses import dataclass
 import numpy as np
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.genome import crossover, founder_genome, mutate
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.networks import evaluate
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin.world import Agent, ErlWorld as BaselineWorld, N_ACTIONS
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.genome import crossover, founder_genome, mutate
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.networks import evaluate
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin.world import Agent, ErlWorld as BaselineWorld, N_ACTIONS
 from eco_evolutionary_erl_baldwin_dqn.networks import dqn_batch_update, epsilon_greedy, q_values
 
 LEARNING_STRATEGIES = frozenset(("ERL", "L", "ERLC", "ERLK", "ERLS"))

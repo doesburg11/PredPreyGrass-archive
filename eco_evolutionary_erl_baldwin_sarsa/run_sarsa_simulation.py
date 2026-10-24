@@ -4,7 +4,7 @@ All baseline flags remain available.  ``--out-dir`` is recommended so SARSA
 results are kept separate from existing REINFORCE runs.
 """
 
-from predpreygrass.evolutionary.eco_evolutionary_erl_baldwin import run_erl_simulation as runner
+from predpreygrass.evolutionary.discrete_space.eco_evolutionary_erl_baldwin import run_erl_simulation as runner
 from eco_evolutionary_erl_baldwin_sarsa.config import config_sarsa
 from eco_evolutionary_erl_baldwin_sarsa.world import SarsaWorld
 
