@@ -15,10 +15,10 @@ evidence of selection. If they're comparable, the observed "cycles" in the real
 runs are likely coincidental drift.
 """
 
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.config.config_env_eco_evolutionary_neutral_control import config_env
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.utils.episode_return_callback import EpisodeReturn
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.utils.networks import build_multi_module_spec
+from eco_evolutionary_metabolic_rate.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_metabolic_rate.config.config_env_eco_evolutionary_neutral_control import config_env
+from eco_evolutionary_metabolic_rate.utils.episode_return_callback import EpisodeReturn
+from eco_evolutionary_metabolic_rate.utils.networks import build_multi_module_spec
 
 import ray
 from ray.rllib.algorithms.ppo import PPOConfig
@@ -54,9 +54,9 @@ def parse_args():
 def get_config_ppo():
     import torch
     if torch.cuda.is_available():
-        from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.config.config_ppo_gpu_eco_evolutionary import config_ppo
+        from eco_evolutionary_metabolic_rate.config.config_ppo_gpu_eco_evolutionary import config_ppo
     else:
-        from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.config.config_ppo_cpu_eco_evolutionary import config_ppo
+        from eco_evolutionary_metabolic_rate.config.config_ppo_cpu_eco_evolutionary import config_ppo
     return config_ppo
 
 

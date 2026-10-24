@@ -47,7 +47,7 @@ from eco_evolutionary_erl_flagship.polymorphism_check import (
     MIN_LIVE_AGENTS,
     bic_bimodality,
 )
-from predpreygrass.non_evolutionary.base_environment.predpreygrass_rllib_env import PredPreyGrass
+from predpreygrass.non_evolutionary.discrete_space.base_environment_discrete.predpreygrass_rllib_env import PredPreyGrass
 
 PRED_PROX_IDX = FEATURE_NAMES.index("predator_proximity")
 

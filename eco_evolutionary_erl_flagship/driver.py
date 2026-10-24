@@ -26,7 +26,7 @@ from eco_evolutionary_erl_flagship.networks import (
     sample_action,
 )
 from eco_evolutionary_erl_flagship.predator_features import extract_predator_features
-from predpreygrass.non_evolutionary.base_environment.predpreygrass_rllib_env import PredPreyGrass
+from predpreygrass.non_evolutionary.discrete_space.base_environment_discrete.predpreygrass_rllib_env import PredPreyGrass
 
 
 @dataclass

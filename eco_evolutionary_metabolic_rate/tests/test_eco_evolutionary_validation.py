@@ -3,10 +3,10 @@ import copy
 import numpy as np
 import pytest
 
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.config.config_env_eco_evolutionary import config_env
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.utils.episode_return_callback import EpisodeReturn
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.utils.genome import Genome
+from eco_evolutionary_metabolic_rate.config.config_env_eco_evolutionary import config_env
+from eco_evolutionary_metabolic_rate.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_metabolic_rate.utils.episode_return_callback import EpisodeReturn
+from eco_evolutionary_metabolic_rate.utils.genome import Genome
 
 
 def _make_test_env(overrides=None):
@@ -51,17 +51,26 @@ class _FakeMetricsLogger:
         self.values[name] = value
 
 
+class _FakeAgentEpisode:
+    def __init__(self, total_return):
+        self._total_return = total_return
+
+    def get_return(self):
+        return self._total_return
+
+
 class _FakeEpisode:
     length = 3
 
+    # The callback reads per-agent returns from agent_episodes (it no longer
+    # calls episode.get_rewards(), which crashed on diverging agent step counts).
+    agent_episodes = {
+        "predator_0": _FakeAgentEpisode(3.0),
+        "prey_0": _FakeAgentEpisode(-1.0),
+    }
+
     def get_return(self):
         return 2.0
-
-    def get_rewards(self):
-        return {
-            "predator_0": [1.0, 2.0],
-            "prey_0": [-1.0],
-        }
 
     def get_last_infos(self):
         return {
@@ -333,7 +342,7 @@ def test_zero_mutation_std_produces_exact_copy_even_at_full_rate():
 
 
 def test_mutation_never_violates_trait_bounds():
-    from predpreygrass.evolutionary.eco_evolutionary_metabolic_rate.utils.genome import mutate_genome
+    from eco_evolutionary_metabolic_rate.utils.genome import mutate_genome
 
     rng = np.random.default_rng(44)
     config = {"genome_mutation": {"rate": 1.0, "std": 0.5}, "trait_bounds": {}}

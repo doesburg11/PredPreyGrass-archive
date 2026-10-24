@@ -5,9 +5,9 @@ because that is pointless for debugging and testing
 with a random policy.
 """
 
-from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.config.config_env_eco_evolutionary import config_env
-from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.utils.pygame_grid_renderer_rllib import PyGameRenderer
+from eco_evolutionary_nuptial_gift.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_nuptial_gift.config.config_env_eco_evolutionary import config_env
+from eco_evolutionary_nuptial_gift.utils.pygame_grid_renderer_rllib import PyGameRenderer
 
 # external libraries
 import pygame

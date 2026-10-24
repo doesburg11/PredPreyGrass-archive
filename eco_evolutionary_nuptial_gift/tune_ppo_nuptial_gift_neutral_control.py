@@ -14,10 +14,10 @@ Compare this run's live_genome/*_male_donation_rate_mean trajectory directly
 against a real run. See README.md.
 """
 
-from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.config.config_env_eco_evolutionary_neutral_control import config_env
-from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.utils.episode_return_callback import EpisodeReturn
-from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.utils.networks import build_multi_module_spec
+from eco_evolutionary_nuptial_gift.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_nuptial_gift.config.config_env_eco_evolutionary_neutral_control import config_env
+from eco_evolutionary_nuptial_gift.utils.episode_return_callback import EpisodeReturn
+from eco_evolutionary_nuptial_gift.utils.networks import build_multi_module_spec
 
 import ray
 from ray.rllib.algorithms.ppo import PPOConfig
@@ -62,9 +62,9 @@ def parse_args():
 def get_config_ppo(force_cpu: bool = False):
     import torch
     if not force_cpu and torch.cuda.is_available():
-        from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.config.config_ppo_gpu_eco_evolutionary import config_ppo
+        from eco_evolutionary_nuptial_gift.config.config_ppo_gpu_eco_evolutionary import config_ppo
     else:
-        from predpreygrass.evolutionary.eco_evolutionary_nuptial_gift.config.config_ppo_cpu_eco_evolutionary import config_ppo
+        from eco_evolutionary_nuptial_gift.config.config_ppo_cpu_eco_evolutionary import config_ppo
     return config_ppo
 
 

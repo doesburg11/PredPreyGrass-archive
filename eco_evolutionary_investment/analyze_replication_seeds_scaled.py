@@ -18,7 +18,7 @@ n=3 vs n=3 cannot reach conventional significance thresholds even in the best
 case. Treat the p-values as a rough indicator, not proof either way.
 
 Usage:
-    python predpreygrass/evolutionary/eco_evolutionary_investment/analyze_replication_seeds_scaled.py
+    python eco_evolutionary_investment/analyze_replication_seeds_scaled.py
 """
 
 import json

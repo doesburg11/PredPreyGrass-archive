@@ -11,7 +11,7 @@
 # Safe to Ctrl-C between runs -- each is a separate process and already-finished
 # runs are unaffected.
 #
-# Usage: bash predpreygrass/evolutionary/eco_evolutionary_investment/run_replication_seeds_scaled.sh
+# Usage: bash eco_evolutionary_investment/run_replication_seeds_scaled.sh
 # Logs go to /tmp/investment_scaled_replication_<condition>_seed<seed>.log so you can tail them.
 
 set -e
@@ -39,7 +39,7 @@ archive_console_log() {
 for seed in "${REAL_SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting SCALED REAL run, seed $seed ==="
   LOG="/tmp/investment_scaled_replication_real_seed${seed}.log"
-  PYTHONPATH=src PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True "$PYTHON_BIN" predpreygrass/evolutionary/eco_evolutionary_investment/tune_ppo_investment_scaled.py \
+  PYTHONPATH=src PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True "$PYTHON_BIN" eco_evolutionary_investment/tune_ppo_investment_scaled.py \
     --seed "$seed" --max-iters "$MAX_ITERS" \
     2>&1 | tee "$LOG"
   archive_console_log "PPO_ECO_EVOLUTION_INVESTMENT_SCALED_SEED${seed}_" "$LOG"
@@ -49,7 +49,7 @@ done
 for seed in "${CONTROL_SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting SCALED CONTROL run, seed $seed ==="
   LOG="/tmp/investment_scaled_replication_control_seed${seed}.log"
-  PYTHONPATH=src PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True "$PYTHON_BIN" predpreygrass/evolutionary/eco_evolutionary_investment/tune_ppo_investment_neutral_control_scaled.py \
+  PYTHONPATH=src PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True "$PYTHON_BIN" eco_evolutionary_investment/tune_ppo_investment_neutral_control_scaled.py \
     --seed "$seed" --max-iters "$MAX_ITERS" \
     2>&1 | tee "$LOG"
   archive_console_log "PPO_ECO_EVOLUTION_INVESTMENT_SCALED_NEUTRAL_CONTROL_SEED${seed}_" "$LOG"

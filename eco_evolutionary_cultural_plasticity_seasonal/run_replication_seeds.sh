@@ -12,7 +12,7 @@
 # Compare real vs. control male_donation_rate-equivalent (here: plasticity)
 # drift via analyze_replication_seeds.py once enough seeds finish.
 #
-# Usage: bash predpreygrass/evolutionary/eco_evolutionary_cultural_plasticity/run_replication_seeds.sh
+# Usage: bash eco_evolutionary_cultural_plasticity/run_replication_seeds.sh
 
 set -e
 cd "$(dirname "$0")/../../.."  # repo root
@@ -22,7 +22,7 @@ MAX_ITERS=1000
 
 for seed in "${SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting REAL run, seed=$seed ==="
-  python predpreygrass/evolutionary/eco_evolutionary_cultural_plasticity/tune_ppo_cultural_plasticity.py \
+  python eco_evolutionary_cultural_plasticity/tune_ppo_cultural_plasticity.py \
     --seed "$seed" --max-iters "$MAX_ITERS" \
     2>&1 | tee "/tmp/cultural_plasticity_replication_real_${seed}.log"
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Finished REAL run, seed=$seed ==="
@@ -30,11 +30,11 @@ done
 
 for seed in "${SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting CONTROL run, seed=$seed ==="
-  python predpreygrass/evolutionary/eco_evolutionary_cultural_plasticity/tune_ppo_cultural_plasticity_neutral_control.py \
+  python eco_evolutionary_cultural_plasticity/tune_ppo_cultural_plasticity_neutral_control.py \
     --seed "$seed" --max-iters "$MAX_ITERS" \
     2>&1 | tee "/tmp/cultural_plasticity_replication_control_${seed}.log"
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Finished CONTROL run, seed=$seed ==="
 done
 
 echo "=== All 6 replication runs complete ==="
-echo "Run: python predpreygrass/evolutionary/eco_evolutionary_cultural_plasticity/analyze_replication_seeds.py"
+echo "Run: python eco_evolutionary_cultural_plasticity/analyze_replication_seeds.py"

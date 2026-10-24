@@ -3,7 +3,7 @@
 # one at a time, since they share one GPU. Safe to Ctrl-C between runs -- each is
 # a separate process and already-finished runs are unaffected.
 #
-# Usage: bash predpreygrass/evolutionary/eco_evolutionary_investment/run_replication_seeds.sh
+# Usage: bash eco_evolutionary_investment/run_replication_seeds.sh
 # Logs go to /tmp/investment_replication_<condition>_seed<seed>.log so you can tail them.
 
 set -e
@@ -29,7 +29,7 @@ archive_console_log() {
 for seed in "${SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting REAL run, seed $seed ==="
   LOG="/tmp/investment_replication_real_seed${seed}.log"
-  python predpreygrass/evolutionary/eco_evolutionary_investment/tune_ppo_investment.py \
+  python eco_evolutionary_investment/tune_ppo_investment.py \
     --seed "$seed" --max-iters "$MAX_ITERS" \
     2>&1 | tee "$LOG"
   archive_console_log "PPO_ECO_EVOLUTION_INVESTMENT_SEED${seed}_" "$LOG"
@@ -39,7 +39,7 @@ done
 for seed in "${SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting CONTROL run, seed $seed ==="
   LOG="/tmp/investment_replication_control_seed${seed}.log"
-  python predpreygrass/evolutionary/eco_evolutionary_investment/tune_ppo_investment_neutral_control.py \
+  python eco_evolutionary_investment/tune_ppo_investment_neutral_control.py \
     --seed "$seed" --max-iters "$MAX_ITERS" \
     2>&1 | tee "$LOG"
   archive_console_log "PPO_ECO_EVOLUTION_INVESTMENT_NEUTRAL_CONTROL_SEED${seed}_" "$LOG"
@@ -47,4 +47,4 @@ for seed in "${SEEDS[@]}"; do
 done
 
 echo "=== All 6 replication runs complete ==="
-echo "Run: python predpreygrass/evolutionary/eco_evolutionary_investment/analyze_replication_seeds.py"
+echo "Run: python eco_evolutionary_investment/analyze_replication_seeds.py"

@@ -1,4 +1,4 @@
-from predpreygrass.evolutionary.eco_evolutionary_investment.config.config_env_eco_evolutionary import config_env as _base_config_env
+from eco_evolutionary_investment.config.config_env_eco_evolutionary import config_env as _base_config_env
 
 # Trial 6 (population scaling): identical to the real experiment config in every
 # respect except grid/population size, so any change in detectable genome-drift

@@ -22,7 +22,7 @@ from eco_evolutionary_erl_flagship.config import (
     config_erl_flagship,
 )
 from eco_evolutionary_erl_flagship.driver import Trial13Driver
-from predpreygrass.non_evolutionary.base_environment.predpreygrass_rllib_env import PredPreyGrass
+from predpreygrass.non_evolutionary.discrete_space.base_environment_discrete.predpreygrass_rllib_env import PredPreyGrass
 
 
 def _cfg(seed):

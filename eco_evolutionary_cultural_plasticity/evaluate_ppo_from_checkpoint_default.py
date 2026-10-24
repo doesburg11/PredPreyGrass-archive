@@ -9,9 +9,9 @@ import numpy as np
 from ray.rllib.core.rl_module.rl_module import RLModule
 from ray.tune.registry import register_env
 
-from predpreygrass.evolutionary.eco_evolutionary_cultural_plasticity.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_cultural_plasticity.config.config_env_eco_evolutionary import config_env
-from predpreygrass.evolutionary.eco_evolutionary_cultural_plasticity.utils.pygame_grid_renderer_rllib import PyGameRenderer
+from eco_evolutionary_cultural_plasticity.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_cultural_plasticity.config.config_env_eco_evolutionary import config_env
+from eco_evolutionary_cultural_plasticity.utils.pygame_grid_renderer_rllib import PyGameRenderer
 
 # ==== CONFIG ====
 try:

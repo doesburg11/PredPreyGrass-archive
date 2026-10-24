@@ -10,10 +10,10 @@ The simulation can be controlled in real-time using a graphical interface.
 
 The environment is rendered using PyGame, and the simulation can be recorded as a video. 
 """
-from predpreygrass.evolutionary.eco_evolutionary_cadence.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_cadence.config.config_env_eco_evolutionary import config_env
-from predpreygrass.evolutionary.eco_evolutionary_cadence.utils.matplot_renderer import CombinedEvolutionVisualizer, PreyDeathCauseVisualizer
-from predpreygrass.evolutionary.eco_evolutionary_cadence.utils.pygame_grid_renderer_rllib import PyGameRenderer, ViewerControlHelper, LoopControlHelper
+from eco_evolutionary_cadence.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_cadence.config.config_env_eco_evolutionary import config_env
+from eco_evolutionary_cadence.utils.matplot_renderer import CombinedEvolutionVisualizer, PreyDeathCauseVisualizer
+from eco_evolutionary_cadence.utils.pygame_grid_renderer_rllib import PyGameRenderer, ViewerControlHelper, LoopControlHelper
 
 # external libraries
 import ray

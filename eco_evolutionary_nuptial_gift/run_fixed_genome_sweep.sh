@@ -18,7 +18,7 @@
 # should be enough for a first look. Escalate iteration count / switch to GPU
 # once the machine's GPU is free, if the first look is promising but unclear.
 #
-# Usage: bash predpreygrass/evolutionary/eco_evolutionary_nuptial_gift/run_fixed_genome_sweep.sh
+# Usage: bash eco_evolutionary_nuptial_gift/run_fixed_genome_sweep.sh
 # Logs go to /tmp/nuptial_gift_sweep_<value>.log so you can tail them.
 
 set -e
@@ -46,7 +46,7 @@ for value in "${VALUES[@]}"; do
   tag=$(echo "$value" | tr -d '.')
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting fixed-genome run, male_donation_rate=$value ==="
   LOG="/tmp/nuptial_gift_sweep_${tag}.log"
-  python predpreygrass/evolutionary/eco_evolutionary_nuptial_gift/tune_ppo_nuptial_gift.py \
+  python eco_evolutionary_nuptial_gift/tune_ppo_nuptial_gift.py \
     --fixed-donation-rate "$value" --max-iters "$MAX_ITERS" --cpu \
     2>&1 | tee "$LOG"
   archive_console_log "PPO_ECO_EVOLUTION_NUPTIAL_GIFT_FIXED${value}_" "$LOG"

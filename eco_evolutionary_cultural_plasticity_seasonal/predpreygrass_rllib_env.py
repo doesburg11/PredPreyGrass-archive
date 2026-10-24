@@ -8,7 +8,7 @@ import numpy as np
 
 from typing import Optional
 
-from predpreygrass.evolutionary.eco_evolutionary_cultural_plasticity_seasonal.utils.genome import (
+from eco_evolutionary_cultural_plasticity_seasonal.utils.genome import (
     Genome,
     GENOME_FIELD_DEFAULTS,
     founder_genome,

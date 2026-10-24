@@ -101,7 +101,7 @@ own stated reproducibility contract, not a Trial-13-specific concern.
 """
 
 from predpreygrass.global_config import RAY_RESULTS_DIR
-from predpreygrass.non_evolutionary.base_environment.config_env import config_env as _flagship_config_env
+from predpreygrass.non_evolutionary.discrete_space.base_environment_discrete.config_env import config_env as _flagship_config_env
 
 # Flagship's env config, with the overrides above applied. A plain dict copy,
 # not a reference -- Trial 13 must never mutate base_environment's shared config_env.

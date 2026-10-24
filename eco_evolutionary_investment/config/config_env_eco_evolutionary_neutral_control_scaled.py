@@ -1,4 +1,4 @@
-from predpreygrass.evolutionary.eco_evolutionary_investment.config.config_env_eco_evolutionary_scaled import config_env as _base_config_env
+from eco_evolutionary_investment.config.config_env_eco_evolutionary_scaled import config_env as _base_config_env
 
 # Trial 6 (population scaling) neutral-drift control: identical to
 # config_env_eco_evolutionary_scaled.py (2x grid/population) in every respect

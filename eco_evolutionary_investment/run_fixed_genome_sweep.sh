@@ -6,7 +6,7 @@
 # eco_evolutionary_metabolic_rate skipped from Iteration 0 onward. See
 # eco_evolutionary_investment/RESULTS.md and predpreygrass/evolutionary/RESULTS.md.
 #
-# Usage: bash predpreygrass/evolutionary/eco_evolutionary_investment/run_fixed_genome_sweep.sh
+# Usage: bash eco_evolutionary_investment/run_fixed_genome_sweep.sh
 # Logs go to /tmp/investment_sweep_<value>.log so you can tail them.
 
 set -e
@@ -33,7 +33,7 @@ for value in "${VALUES[@]}"; do
   tag=$(echo "$value" | tr -d '.')
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting fixed-genome run, investment_fraction=$value ==="
   LOG="/tmp/investment_sweep_${tag}.log"
-  python predpreygrass/evolutionary/eco_evolutionary_investment/tune_ppo_investment.py \
+  python eco_evolutionary_investment/tune_ppo_investment.py \
     --fixed-investment-fraction "$value" --max-iters "$MAX_ITERS" \
     2>&1 | tee "$LOG"
   archive_console_log "PPO_ECO_EVOLUTION_INVESTMENT_FIXED${tag}_" "$LOG"

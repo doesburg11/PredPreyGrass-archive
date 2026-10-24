@@ -3,7 +3,7 @@
 # sequentially, one at a time, since they share one GPU. Safe to Ctrl-C between
 # runs -- each is a separate process and already-finished runs are unaffected.
 #
-# Usage: bash predpreygrass/evolutionary/eco_evolutionary_metabolic_rate/run_replication_seeds.sh
+# Usage: bash eco_evolutionary_metabolic_rate/run_replication_seeds.sh
 # Logs go to /tmp/replication_seed_<condition>_<seed>.log so you can tail them.
 
 set -e
@@ -34,7 +34,7 @@ archive_console_log() {
 for seed in "${SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting REAL run, seed $seed ==="
   LOG="/tmp/replication_real_seed${seed}.log"
-  python predpreygrass/evolutionary/eco_evolutionary_metabolic_rate/tune_ppo_metabolic_rate.py \
+  python eco_evolutionary_metabolic_rate/tune_ppo_metabolic_rate.py \
     --seed "$seed" --max-iters "$MAX_ITERS" \
     2>&1 | tee "$LOG"
   archive_console_log "PPO_ECO_EVOLUTION_METABOLIC_RATE_SEED${seed}_" "$LOG"
@@ -44,7 +44,7 @@ done
 for seed in "${SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting CONTROL run, seed $seed ==="
   LOG="/tmp/replication_control_seed${seed}.log"
-  python predpreygrass/evolutionary/eco_evolutionary_metabolic_rate/tune_ppo_metabolic_rate_neutral_control.py \
+  python eco_evolutionary_metabolic_rate/tune_ppo_metabolic_rate_neutral_control.py \
     --seed "$seed" --max-iters "$MAX_ITERS" \
     2>&1 | tee "$LOG"
   archive_console_log "PPO_ECO_EVOLUTION_METABOLIC_RATE_NEUTRAL_CONTROL_SEED${seed}_" "$LOG"
@@ -52,4 +52,4 @@ for seed in "${SEEDS[@]}"; do
 done
 
 echo "=== All 6 replication runs complete ==="
-echo "Run: python predpreygrass/evolutionary/eco_evolutionary_metabolic_rate/analyze_replication_seeds.py"
+echo "Run: python eco_evolutionary_metabolic_rate/analyze_replication_seeds.py"

@@ -5,7 +5,7 @@ on the proximate-vs-ultimate-reward question (see analyze_proximate_reward.py) f
 the checkpoint's current population, without needing a completed lineage_fitness.csv.
 
 No rendering support -- flagship's own PyGame renderer
-(non_evolutionary/base_environment/utils/pygame_grid_renderer_rllib.py) is a
+(non_evolutionary/discrete_space/base_environment_discrete/utils/pygame_grid_renderer_rllib.py) is a
 separate, heavier interactive system out of scope for this lightweight module; see
 this module's README.md.
 
@@ -25,7 +25,7 @@ from eco_evolutionary_erl_flagship.checkpoint import load_checkpoint
 from eco_evolutionary_erl_flagship.driver import Trial13Driver
 from eco_evolutionary_erl_flagship.features import FEATURE_NAMES
 from eco_evolutionary_erl_flagship.metrics import CsvLogger, lineage_fieldnames, lineage_record
-from predpreygrass.non_evolutionary.base_environment.predpreygrass_rllib_env import PredPreyGrass
+from predpreygrass.non_evolutionary.discrete_space.base_environment_discrete.predpreygrass_rllib_env import PredPreyGrass
 
 
 def _print_summary(driver: Trial13Driver, label: str):

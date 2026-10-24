@@ -20,7 +20,7 @@ import numpy as np
 from collections import deque
 from typing import Optional
 
-from predpreygrass.evolutionary.eco_evolutionary.utils.genome import Genome, founder_genome, mutate_genome
+from eco_evolutionary.utils.genome import Genome, founder_genome, mutate_genome
 
 
 class PredPreyGrass(MultiAgentEnv):

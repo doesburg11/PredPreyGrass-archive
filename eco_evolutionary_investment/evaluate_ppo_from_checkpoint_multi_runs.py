@@ -2,9 +2,9 @@ try:
     from eco_evolutionary_investment.run_paths import RAY_RESULTS_DIR, latest_checkpoint
 except ModuleNotFoundError:
     from run_paths import RAY_RESULTS_DIR, latest_checkpoint  # Support direct script execution.
-from predpreygrass.evolutionary.eco_evolutionary_investment.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_investment.config.config_env_eco_evolutionary import config_env
-from predpreygrass.evolutionary.eco_evolutionary_investment.utils.matplot_renderer import CombinedEvolutionVisualizer
+from eco_evolutionary_investment.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_investment.config.config_env_eco_evolutionary import config_env
+from eco_evolutionary_investment.utils.matplot_renderer import CombinedEvolutionVisualizer
 
 # external libraries
 import os

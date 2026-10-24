@@ -12,10 +12,10 @@ Compare this run's live_haystack/*_mean_wrong_loci trajectory directly against
 the real run (see RESULTS.md).
 """
 
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.config.config_env_eco_evolutionary_neutral_control import config_env
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.utils.episode_return_callback import EpisodeReturn
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.utils.networks import build_multi_module_spec
+from eco_evolutionary_metabolic_code.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_metabolic_code.config.config_env_eco_evolutionary_neutral_control import config_env
+from eco_evolutionary_metabolic_code.utils.episode_return_callback import EpisodeReturn
+from eco_evolutionary_metabolic_code.utils.networks import build_multi_module_spec
 
 import ray
 from ray.rllib.algorithms.ppo import PPOConfig
@@ -52,12 +52,12 @@ def parse_args():
 def get_config_ppo():
     num_cpus = os.cpu_count()
     if num_cpus == 32:
-        from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.config.config_ppo_gpu_eco_evolutionary import config_ppo
+        from eco_evolutionary_metabolic_code.config.config_ppo_gpu_eco_evolutionary import config_ppo
     elif num_cpus == 8:
-        from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.config.config_ppo_cpu_eco_evolutionary import config_ppo
+        from eco_evolutionary_metabolic_code.config.config_ppo_cpu_eco_evolutionary import config_ppo
     else:
         # Default to CPU config for other CPU counts to keep training usable across machines.
-        from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.config.config_ppo_cpu_eco_evolutionary import config_ppo
+        from eco_evolutionary_metabolic_code.config.config_ppo_cpu_eco_evolutionary import config_ppo
     return config_ppo
 
 

@@ -13,7 +13,7 @@
 # them. Analyze with analyze_replication_seeds.py once enough seeds finish
 # (it reports "not enough runs yet" gracefully for missing seeds).
 #
-# Usage: bash predpreygrass/evolutionary/eco_evolutionary_nuptial_gift/run_replication_seeds.sh
+# Usage: bash eco_evolutionary_nuptial_gift/run_replication_seeds.sh
 
 set -e
 cd "$(dirname "$0")/../../.."  # repo root
@@ -24,7 +24,7 @@ NUM_ENV_RUNNERS=28
 
 for seed in "${SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting REAL run, seed=$seed ==="
-  python predpreygrass/evolutionary/eco_evolutionary_nuptial_gift/tune_ppo_nuptial_gift.py \
+  python eco_evolutionary_nuptial_gift/tune_ppo_nuptial_gift.py \
     --seed "$seed" --max-iters "$MAX_ITERS" --num-env-runners "$NUM_ENV_RUNNERS" \
     2>&1 | tee "/tmp/nuptial_gift_replication_real_${seed}.log"
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Finished REAL run, seed=$seed ==="
@@ -32,11 +32,11 @@ done
 
 for seed in "${SEEDS[@]}"; do
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting CONTROL run, seed=$seed ==="
-  python predpreygrass/evolutionary/eco_evolutionary_nuptial_gift/tune_ppo_nuptial_gift_neutral_control.py \
+  python eco_evolutionary_nuptial_gift/tune_ppo_nuptial_gift_neutral_control.py \
     --seed "$seed" --max-iters "$MAX_ITERS" --num-env-runners "$NUM_ENV_RUNNERS" \
     2>&1 | tee "/tmp/nuptial_gift_replication_control_${seed}.log"
   echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Finished CONTROL run, seed=$seed ==="
 done
 
 echo "=== All 6 replication runs complete ==="
-echo "Run: python predpreygrass/evolutionary/eco_evolutionary_nuptial_gift/analyze_replication_seeds.py"
+echo "Run: python eco_evolutionary_nuptial_gift/analyze_replication_seeds.py"

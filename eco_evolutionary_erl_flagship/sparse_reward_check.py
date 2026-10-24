@@ -57,7 +57,7 @@ from eco_evolutionary_erl_flagship.config import (
 )
 from eco_evolutionary_erl_flagship.driver import Trial13Driver
 from eco_evolutionary_erl_flagship.positive_control import GENOMES
-from predpreygrass.non_evolutionary.base_environment.predpreygrass_rllib_env import PredPreyGrass
+from predpreygrass.non_evolutionary.discrete_space.base_environment_discrete.predpreygrass_rllib_env import PredPreyGrass
 
 MIN_LIVE_AGENTS = 10
 

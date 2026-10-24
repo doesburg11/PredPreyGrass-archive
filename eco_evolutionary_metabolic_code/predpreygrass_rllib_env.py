@@ -8,7 +8,7 @@ import numpy as np
 
 from typing import Optional
 
-from predpreygrass.evolutionary.eco_evolutionary_metabolic_code.utils.genome import (
+from eco_evolutionary_metabolic_code.utils.genome import (
     Genome,
     GENOME_FIELD_DEFAULTS,
     founder_genome,

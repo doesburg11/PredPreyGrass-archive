@@ -82,7 +82,7 @@ custom pure-Python simulator, hand-designed 7-channel ray-cast observation).
 
 This module asks the same question — does an evolved reward function diverge from
 fitness? — inside the project's flagship module
-(`predpreygrass/non_evolutionary/base_environment`) instead: a richer, 25×25
+(`predpreygrass/non_evolutionary/discrete_space/base_environment_discrete`) instead: a richer, 25×25
 predator/prey/grass ecology with a spatial image observation, normally trained via
 RLlib PPO against a fixed sparse reward. Only **prey** get an evolved reward
 genome here — genuinely discovered, individually-inherited, the subject of the

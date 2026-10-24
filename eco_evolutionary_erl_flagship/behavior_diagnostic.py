@@ -55,7 +55,7 @@ from eco_evolutionary_erl_flagship.config import (
 from eco_evolutionary_erl_flagship.driver import Trial13Driver
 from eco_evolutionary_erl_flagship.features import FEATURE_NAMES
 from eco_evolutionary_erl_flagship.positive_control import GENOMES
-from predpreygrass.non_evolutionary.base_environment.predpreygrass_rllib_env import PredPreyGrass
+from predpreygrass.non_evolutionary.discrete_space.base_environment_discrete.predpreygrass_rllib_env import PredPreyGrass
 
 PRED_DX = FEATURE_NAMES.index("predator_dx")
 PRED_DY = FEATURE_NAMES.index("predator_dy")

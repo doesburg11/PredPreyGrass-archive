@@ -3,10 +3,10 @@ import copy
 import numpy as np
 import pytest
 
-from predpreygrass.evolutionary.eco_evolutionary_cultural_plasticity_seasonal.config.config_env_eco_evolutionary import config_env
-from predpreygrass.evolutionary.eco_evolutionary_cultural_plasticity_seasonal.predpreygrass_rllib_env import PredPreyGrass
-from predpreygrass.evolutionary.eco_evolutionary_cultural_plasticity_seasonal.utils.episode_return_callback import EpisodeReturn
-from predpreygrass.evolutionary.eco_evolutionary_cultural_plasticity_seasonal.utils.genome import (
+from eco_evolutionary_cultural_plasticity_seasonal.config.config_env_eco_evolutionary import config_env
+from eco_evolutionary_cultural_plasticity_seasonal.predpreygrass_rllib_env import PredPreyGrass
+from eco_evolutionary_cultural_plasticity_seasonal.utils.episode_return_callback import EpisodeReturn
+from eco_evolutionary_cultural_plasticity_seasonal.utils.genome import (
     Genome,
     founder_genome,
     mutate_genome,

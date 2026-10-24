@@ -1,4 +1,4 @@
-from predpreygrass.evolutionary.eco_evolutionary_investment.config.config_ppo_gpu_eco_evolutionary import config_ppo as _base_config_ppo
+from eco_evolutionary_investment.config.config_ppo_gpu_eco_evolutionary import config_ppo as _base_config_ppo
 
 # Trial 6 (population scaling): the GPU inference/training batch for this new API
 # stack batches all currently-live agents within an env step into one forward pass,
