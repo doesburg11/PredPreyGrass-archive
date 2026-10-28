@@ -1,7 +1,7 @@
 """Evaluate stronger attraction, reusing a validated matched neutral baseline.
 
 Existing strength-1 results stay unchanged. Run from the repository root:
-python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.strength_sweep CHECKPOINT
+python -m eco_evolutionary_social_preference.strength_sweep CHECKPOINT
 """
 import argparse
 import hashlib

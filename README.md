@@ -38,6 +38,20 @@ with the main `PredPreyGrass` project installed (`predpreygrass.training`,
 and the K/W warm starts read `base_environment_continuous` runs there), e.g.
 `python -m foraging_swarms.measure_swarms ...`.
 
+### [`eco_evolutionary_social_preference`](eco_evolutionary_social_preference/) — fixed social preference in the continuous world (archived 2026-10-28)
+
+A proof of concept on top of `eco_evolutionary_continuous_traits`: predators
+given a fixed, externally assigned attraction to other predators (not a gene,
+not inherited, not trained). Attraction did change behaviour, closer spacing
+and longer local encounters at two checkpoints of one training run, but no
+survival, reproductive or hunting benefit was established: the pilot's
+apparent advantage in mixed populations was not confirmed on 100 fresh seeds,
+and the controlled hunt was dominated by early prey births. Closed by its own
+decision record (`RESULTS.md`); reopening would need a new mechanism and
+evaluation protocol. Moved with its history (`git subtree split`); run from
+this repository's root with the main `PredPreyGrass` project installed, e.g.
+`python -m eco_evolutionary_social_preference.evaluate ...`.
+
 ### [`eco_evolutionary_erl_flagship`](eco_evolutionary_erl_flagship/) — Trial 13 (archived 2026-10-03)
 
 Hand-designed cautious rewards beat reckless rewards (9/10 competitions) and
@@ -176,6 +190,8 @@ independent evolutionary-discovery objective reached no dependable remedy.
 The positive ERL Baldwin and coevolution modules remain in the main repository.
 `foraging_swarms` is a non-evolutionary module (shared PPO only) archived as a
 controlled null.
+`eco_evolutionary_social_preference` is a fixed-policy proof of concept whose
+behavioural effect held but whose fitness benefit was not established.
 
 ## Recovering full context
 

@@ -1,6 +1,6 @@
 """Evaluate fixed social preferences against a frozen existing PPO checkpoint.
 
-Run: python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.evaluate /path/to/checkpoint --episodes 5
+Run: python -m eco_evolutionary_social_preference.evaluate /path/to/checkpoint --episodes 5
 This is an inference-only proof of concept, not an evolutionary experiment.
 """
 import argparse

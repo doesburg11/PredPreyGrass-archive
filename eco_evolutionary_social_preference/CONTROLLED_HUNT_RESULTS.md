@@ -87,7 +87,7 @@ prove equivalence. Do not analyse interim outcomes or tune the geometry/seeds.
 From the repository root, choose a new output directory:
 
 ```bash
-nice -n 10 .conda/bin/python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.controlled_hunt \
+nice -n 10 .conda/bin/python -m eco_evolutionary_social_preference.controlled_hunt \
   predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_traits/runs/blrep2500_both_learn_s2/checkpoint \
   --output-dir /tmp/ppg_controlled_hunt_new
 ```

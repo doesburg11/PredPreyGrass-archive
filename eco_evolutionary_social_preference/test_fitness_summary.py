@@ -1,4 +1,4 @@
-from predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.fitness_summary import build_summary
+from eco_evolutionary_social_preference.fitness_summary import build_summary
 
 
 def test_summary_pairs_missing_values_and_totals():

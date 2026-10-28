@@ -59,8 +59,8 @@ is overwritten.
 From the repository root:
 
 ```bash
-nice -n 10 .conda/bin/python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.hunting_replay \
-  predpreygrass/evolutionary/continuous_space/eco_evolutionary_social_preference/results/fitness_confirmation_checkpoint2_s102_201 \
+nice -n 10 .conda/bin/python -m eco_evolutionary_social_preference.hunting_replay \
+  eco_evolutionary_social_preference/results/fitness_confirmation_checkpoint2_s102_201 \
   --output-dir /tmp/ppg_hunting_new_run
 ```
 
@@ -138,7 +138,7 @@ in this check even though the main comparison separates them from metabolism.
 All **51 current module tests** pass, using only the module's top-level tests:
 
 ```bash
-.conda/bin/python -m pytest -q predpreygrass/evolutionary/continuous_space/eco_evolutionary_social_preference/test_*.py
+.conda/bin/python -m pytest -q eco_evolutionary_social_preference/test_*.py
 ```
 
 This explicit test selection avoids counting archived source-snapshot tests as

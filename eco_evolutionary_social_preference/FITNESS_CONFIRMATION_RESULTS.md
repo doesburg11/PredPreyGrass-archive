@@ -45,8 +45,8 @@ fidelity check for those seeds, not a universal equivalence proof.
 From the repository root, choose a new output directory:
 
 ```bash
-nice -n 10 .conda/bin/python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.fitness_confirmation \
-  predpreygrass/evolutionary/continuous_space/eco_evolutionary_social_preference/results/fitness_mixed_checkpoint2_s82_101/fitness.json \
+nice -n 10 .conda/bin/python -m eco_evolutionary_social_preference.fitness_confirmation \
+  eco_evolutionary_social_preference/results/fitness_mixed_checkpoint2_s82_101/fitness.json \
   --output-dir /tmp/ppg_fitness_confirmation_new
 ```
 

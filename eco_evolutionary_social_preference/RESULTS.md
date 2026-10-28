@@ -129,7 +129,7 @@ would need a separate, explicit resource/reproduction protocol.
   with a specified ecological mechanism, controls and stopping criteria. Do
   not reinterpret this experiment as evidence for inherited cooperation.
 - Continue the broader learning/evolution work separately. The existing
-  [field-of-view pilot](../eco_evolutionary_continuous_fov/README.md) addresses
+  [field-of-view pilot](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_fov/README.md) addresses
   a different question and is not closed or modified here.
 
 Earlier reports preserve the chronology, including suggestions for next
@@ -141,7 +141,7 @@ completed results and their original provenance remain unchanged.
 The latest completed verification passed **65 current top-level module tests**:
 
 ```bash
-.conda/bin/python -m pytest -q predpreygrass/evolutionary/continuous_space/eco_evolutionary_social_preference/test_*.py
+.conda/bin/python -m pytest -q eco_evolutionary_social_preference/test_*.py
 ```
 
 Explicit top-level selection avoids counting archived source-snapshot tests

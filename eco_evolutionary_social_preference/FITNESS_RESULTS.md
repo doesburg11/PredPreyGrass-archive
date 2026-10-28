@@ -48,10 +48,10 @@ estimate what would happen if the whole population changed preference.
 From the repository root:
 
 ```bash
-.conda/bin/python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.fitness_evaluate \
-  predpreygrass/evolutionary/continuous_space/eco_evolutionary_social_preference/results/mixed_checkpoint2_s82_101/mixed_s82_101.json \
+.conda/bin/python -m eco_evolutionary_social_preference.fitness_evaluate \
+  eco_evolutionary_social_preference/results/mixed_checkpoint2_s82_101/mixed_s82_101.json \
   --output-dir /tmp/ppg_fitness_new_run
-.conda/bin/python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.fitness_summary \
+.conda/bin/python -m eco_evolutionary_social_preference.fitness_summary \
   /tmp/ppg_fitness_new_run/fitness.json
 ```
 

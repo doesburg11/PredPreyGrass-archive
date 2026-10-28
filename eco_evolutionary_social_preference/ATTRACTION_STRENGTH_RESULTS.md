@@ -140,7 +140,7 @@ is not the priority suggested by these results.
 The runner can be invoked from the repository root with:
 
 ```bash
-nice -n 10 .conda/bin/python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.strength_sweep \
+nice -n 10 .conda/bin/python -m eco_evolutionary_social_preference.strength_sweep \
   predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_traits/runs/blrep2500_both_learn_s1/checkpoint \
   --strengths 2 4 --output-dir /tmp/attraction-rerun
 ```

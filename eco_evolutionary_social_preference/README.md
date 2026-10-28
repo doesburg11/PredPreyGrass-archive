@@ -1,5 +1,7 @@
 # Social preference: fixed-policy proof of concept
 
+> **Archived 2026-10-28** from PredPreyGrass (`predpreygrass/evolutionary/continuous_space/eco_evolutionary_social_preference/`): closed with a behavioural effect but no survival, reproductive or hunting benefit established. Commands below run from the PredPreyGrass-archive root with the main PredPreyGrass project installed (the checkpoints are `eco_evolutionary_continuous_traits` runs there). Run the tests as `python -m pytest eco_evolutionary_social_preference/test_*.py` (65 tests); collecting the whole folder also finds the source snapshots under `results/`, whose package name clashes. Saved results and source snapshots still name the old paths.
+
 **Status: closed (2026-10-28). Behavioral proof of concept demonstrated;
 no survival, reproductive or hunting benefit established in the tested settings.**
 
@@ -21,7 +23,7 @@ Its training, checkpoints and existing environment rules were preserved.
 The social preference remains externally assigned and non-heritable; existing
 body-trait inheritance was not changed. The broader learning/evolution and
 cooperation objectives remain open, including the separate
-[field-of-view experiment](../eco_evolutionary_continuous_fov/README.md).
+[field-of-view experiment](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_fov/README.md).
 
 ## Final findings
 
@@ -72,8 +74,8 @@ log probabilities in PPO's optimization.**
 ## Run
 
 ```bash
-python -m pytest predpreygrass/evolutionary/continuous_space/eco_evolutionary_social_preference/test_social_bias.py
-python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.evaluate /path/to/checkpoint --episodes 5 --output social_poc.json
+python -m pytest eco_evolutionary_social_preference/test_social_bias.py
+python -m eco_evolutionary_social_preference.evaluate /path/to/checkpoint --episodes 5 --output social_poc.json
 ```
 
 Uses one frozen PPO checkpoint, matched episode seeds, and the same initial
@@ -213,10 +215,10 @@ weight each episode equally. Three of the 20 seeds repeat the earlier pilot.
 The 20-seed run uses seeds 42–61, strength 1.0 and the same completed checkpoint:
 
 ```bash
-nice -n 10 .conda/bin/python -m predpreygrass.evolutionary.continuous_space.eco_evolutionary_social_preference.evaluate \
+nice -n 10 .conda/bin/python -m eco_evolutionary_social_preference.evaluate \
   predpreygrass/evolutionary/continuous_space/eco_evolutionary_continuous_traits/runs/blrep2500_both_learn_s1/checkpoint \
   --episodes 20 --seed 42 \
-  --output predpreygrass/evolutionary/continuous_space/eco_evolutionary_social_preference/results/movement_s42_61_strength1.json
+  --output eco_evolutionary_social_preference/results/movement_s42_61_strength1.json
 ```
 
 Existing background Python/Ray jobs were left running. This evaluator uses one
