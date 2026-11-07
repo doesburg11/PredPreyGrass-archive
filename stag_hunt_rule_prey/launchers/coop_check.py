@@ -14,8 +14,8 @@ _w = {}
 def init(checkpoint):
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.checkpoints import checkpoint_env_config, load_modules
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import StagHuntRulePrey
+    from stag_hunt_rule_prey.checkpoints import checkpoint_env_config, load_modules
+    from stag_hunt_rule_prey.environment import StagHuntRulePrey
 
     torch.set_num_threads(1)
     config = checkpoint_env_config(checkpoint)
@@ -25,7 +25,7 @@ def init(checkpoint):
 
 
 def play(seed):
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey import evaluate
+    from stag_hunt_rule_prey import evaluate
 
     env = _w["env"]
     radius = env.party_radius

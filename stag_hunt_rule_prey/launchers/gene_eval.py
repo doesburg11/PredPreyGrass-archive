@@ -4,7 +4,7 @@ each episode's founders come from one lineage's gene pool at the checkpoint
 records the founders' and final rabbits' mean genes. Run from the
 repository root:
 
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/launchers/gene_eval.py \\
+    python -m stag_hunt_rule_prey.launchers.gene_eval \\
         CHECKPOINT POOL_DIR EPISODES WORKERS OUT
 """
 
@@ -13,8 +13,8 @@ import sys
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey import evaluate
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.launchers.gene_pools import load_pools, use_pool
+from stag_hunt_rule_prey import evaluate
+from stag_hunt_rule_prey.launchers.gene_pools import load_pools, use_pool
 
 _w = {}
 
@@ -22,7 +22,7 @@ _w = {}
 def init(checkpoint, pools):
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.checkpoints import checkpoint_env_config, load_modules
+    from stag_hunt_rule_prey.checkpoints import checkpoint_env_config, load_modules
 
     torch.set_num_threads(1)
     config = checkpoint_env_config(checkpoint)

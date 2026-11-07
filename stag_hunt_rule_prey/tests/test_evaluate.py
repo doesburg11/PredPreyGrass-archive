@@ -4,8 +4,8 @@ import random
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import MOVES, StagHuntRulePrey
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.evaluate import joint_arrivals, outcome, shifted
+from stag_hunt_rule_prey.environment import MOVES, StagHuntRulePrey
+from stag_hunt_rule_prey.evaluate import joint_arrivals, outcome, shifted
 
 
 def test_joint_arrivals_on_tracks():
@@ -111,8 +111,8 @@ def test_tracked_count_with_births_kills_and_an_ending():
 
 
 def test_evaluation_plays_whole_episodes(monkeypatch):
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey import checkpoints, evaluate
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import DEFAULT_CONFIG
+    from stag_hunt_rule_prey import checkpoints, evaluate
+    from stag_hunt_rule_prey.environment import DEFAULT_CONFIG
 
     monkeypatch.setattr(checkpoints, "checkpoint_env_config", lambda checkpoint: dict(DEFAULT_CONFIG, truncate_on_prey_extinction=True))
     monkeypatch.setattr(checkpoints, "load_modules", lambda checkpoint: {})
@@ -122,8 +122,8 @@ def test_evaluation_plays_whole_episodes(monkeypatch):
 
 
 def test_summary_has_hunt_energy_means():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey import evaluate
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import new_hunt_stats
+    from stag_hunt_rule_prey import evaluate
+    from stag_hunt_rule_prey.environment import new_hunt_stats
 
     stats = new_hunt_stats()
     stats.update(hunts_party_2=2, hunted_party_energy_total=30.0, hunted_mammoth_energy_total=24.0)
@@ -143,8 +143,8 @@ def _saved_run(tmp_path, config):
 
 
 def test_checkpoints_from_before_alive_reward_still_load(tmp_path):
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.checkpoints import LATER_SETTINGS, checkpoint_env_config
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import DEFAULT_CONFIG
+    from stag_hunt_rule_prey.checkpoints import LATER_SETTINGS, checkpoint_env_config
+    from stag_hunt_rule_prey.environment import DEFAULT_CONFIG
 
     old = {k: v for k, v in DEFAULT_CONFIG.items() if k not in LATER_SETTINGS}
     config = checkpoint_env_config(_saved_run(tmp_path, old))
@@ -154,8 +154,8 @@ def test_checkpoints_from_before_alive_reward_still_load(tmp_path):
 def test_checkpoints_missing_any_other_setting_are_refused(tmp_path):
     import pytest
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.checkpoints import checkpoint_env_config
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import DEFAULT_CONFIG
+    from stag_hunt_rule_prey.checkpoints import checkpoint_env_config
+    from stag_hunt_rule_prey.environment import DEFAULT_CONFIG
 
     old = {k: v for k, v in DEFAULT_CONFIG.items() if k != "width"}
     with pytest.raises(ValueError):

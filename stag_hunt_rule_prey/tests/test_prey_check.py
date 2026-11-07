@@ -5,9 +5,9 @@ import argparse
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import MOVES, StagHuntRulePrey
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.geometry import Vector
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.prey_check import IDLE_HUNTER, STRETCH, harmless_world, parse_setting, play_episode, summarise
+from stag_hunt_rule_prey.environment import MOVES, StagHuntRulePrey
+from stag_hunt_rule_prey.geometry import Vector
+from stag_hunt_rule_prey.prey_check import IDLE_HUNTER, STRETCH, harmless_world, parse_setting, play_episode, summarise
 
 
 def test_the_idle_hunter_lasts_the_episode_and_has_no_young():

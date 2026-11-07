@@ -10,7 +10,7 @@ Cooperation is shown if approaches to fat rabbits have a partner near more
 often than approaches to lean rabbits and than chance (RESULTS.md, section 12).
 
 Run from the repository root:
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/launchers/coop_fair.py \\
+    python -m stag_hunt_rule_prey.launchers.coop_fair \\
         CHECKPOINT EPISODES WORKERS [POOL_DIR]
 
 With rabbit genes, POOL_DIR gives each episode's founders as in gene_eval.py.
@@ -27,8 +27,8 @@ _w = {}
 def init(checkpoint, pools):
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.checkpoints import checkpoint_env_config, load_modules
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import StagHuntRulePrey
+    from stag_hunt_rule_prey.checkpoints import checkpoint_env_config, load_modules
+    from stag_hunt_rule_prey.environment import StagHuntRulePrey
 
     torch.set_num_threads(1)
     config = checkpoint_env_config(checkpoint)
@@ -42,11 +42,11 @@ def init(checkpoint, pools):
 
 
 def play(seed):
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey import evaluate
+    from stag_hunt_rule_prey import evaluate
 
     env = _w["env"]
     if _w["pools"] is not None:
-        from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.launchers.gene_pools import use_pool
+        from stag_hunt_rule_prey.launchers.gene_pools import use_pool
 
         use_pool(env, _w["pools"], seed)
     radius = env.party_radius
@@ -93,7 +93,7 @@ def main():
     checkpoint, episodes, workers = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
     pools = None
     if len(sys.argv) > 4:
-        from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.launchers.gene_pools import load_pools
+        from stag_hunt_rule_prey.launchers.gene_pools import load_pools
 
         pools = load_pools(sys.argv[4], checkpoint)
     with ProcessPoolExecutor(workers, mp_context=get_context("spawn"), initializer=init, initargs=(checkpoint, pools)) as pool:

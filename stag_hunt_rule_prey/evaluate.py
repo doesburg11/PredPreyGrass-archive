@@ -22,7 +22,7 @@ seek mammoths independently of each other also arrive together more often
 than shifted tracks do; that is what the
 untrained policies are for.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.evaluate \\
+    python -m stag_hunt_rule_prey.evaluate \\
         <checkpoint dir | untrained> <episodes> [out.json] [--workers N]
 
 With `untrained`, the policies are freshly initialised (seed 0) in the
@@ -39,8 +39,8 @@ from pathlib import Path
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.callbacks import derived_rates
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import (
+from stag_hunt_rule_prey.callbacks import derived_rates
+from stag_hunt_rule_prey.environment import (
     JOINT_WINDOW,
     MOVES,
     SPECIES,
@@ -172,7 +172,7 @@ def play(env, modules, seed):
 def _init(checkpoint):
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.checkpoints import (
+    from stag_hunt_rule_prey.checkpoints import (
         checkpoint_env_config,
         load_modules,
         untrained_modules,
@@ -180,7 +180,7 @@ def _init(checkpoint):
 
     torch.set_num_threads(1)
     if checkpoint == "untrained":
-        from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.config.config_env import config_env
+        from stag_hunt_rule_prey.config.config_env import config_env
 
         config = dict(config_env)
         _worker["modules"] = untrained_modules(config, seed=0)

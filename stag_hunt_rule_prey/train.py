@@ -3,7 +3,7 @@ environment and PPO configuration files.
 
 Run from the repository root:
 
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/train.py
+    python -m stag_hunt_rule_prey.train
 
 Each run saves what it was started with in <run>/source_code/ (see
 save_source_code), so it can be reproduced later.
@@ -22,8 +22,8 @@ from pathlib import Path
 from types import SimpleNamespace
 from zoneinfo import ZoneInfo
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.config.config_env import config_env
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.config.config_ppo import config_ppo
+from stag_hunt_rule_prey.config.config_env import config_env
+from stag_hunt_rule_prey.config.config_ppo import config_ppo
 
 # Set native thread limits before loading NumPy/PyTorch in CLI runs.
 if __name__ == "__main__":
@@ -39,8 +39,8 @@ from ray.rllib.core.rl_module.multi_rl_module import MultiRLModuleSpec
 from ray.rllib.core.rl_module.rl_module import RLModuleSpec
 from tensorboardX import SummaryWriter
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.callbacks import HuntLogger
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import ENV_NAME, register, species_of
+from stag_hunt_rule_prey.callbacks import HuntLogger
+from stag_hunt_rule_prey.environment import ENV_NAME, register, species_of
 
 POLICIES = {"predator_policy"}
 

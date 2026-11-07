@@ -4,9 +4,9 @@
 
 **Status (2026-11-05): stopped, target not met.** Calibration stopped after 20
 rounds, and the follow-up with rule-following prey,
-[`stag_hunt_rule_prey`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/README.md), was stopped the same
+[`stag_hunt_rule_prey`](../stag_hunt_rule_prey/README.md), was stopped the same
 day. The stag hunt line as a whole was closed on 2026-11-06, with a closing summary in
-[`stag_hunt_rule_prey/RESULTS.md`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/RESULTS.md), section 15. Details of every round,
+[`stag_hunt_rule_prey/RESULTS.md`](../stag_hunt_rule_prey/RESULTS.md), section 15. Details of every round,
 the reasons for each change and for stopping are in [RESULTS.md](RESULTS.md).
 
 **One more run (2026-11-06, RESULTS section 5):** lean and fat rabbits with both

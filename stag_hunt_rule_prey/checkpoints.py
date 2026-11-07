@@ -5,7 +5,7 @@ import json
 import pickle
 from pathlib import Path
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import DEFAULT_CONFIG, StagHuntRulePrey
+from stag_hunt_rule_prey.environment import DEFAULT_CONFIG, StagHuntRulePrey
 
 
 # Settings added after earlier runs, which trained as these values say.
@@ -105,7 +105,7 @@ def untrained_modules(config, seed):
     seeded, on the CPU, in evaluation mode."""
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.config.config_ppo import config_ppo
+    from stag_hunt_rule_prey.config.config_ppo import config_ppo
 
     torch.manual_seed(seed)
     env = StagHuntRulePrey(config)

@@ -309,6 +309,11 @@
       "source": "/home/doesburg/Projects/PredPreyGrass/predpreygrass/non_evolutionary/continuous_space/stag_hunt_continuous/runs",
       "destination": "/home/doesburg/Projects/PredPreyGrass-archive/stag_hunt_continuous/runs",
       "note": "whole runs/ folder moved 2026-11-07 (127 entries, 24 GB); results/*.json and runs' source_code snapshots still record the old paths"
+    },
+    {
+      "source": "/home/doesburg/Projects/PredPreyGrass/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/runs",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/stag_hunt_rule_prey/runs",
+      "note": "whole runs/ folder moved 2026-11-07 (55 entries, 6.3 GB); results/*.json and runs' source_code snapshots still record the old paths"
     }
   ],
   "unmatched": [

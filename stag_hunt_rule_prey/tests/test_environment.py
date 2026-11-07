@@ -4,8 +4,8 @@ rules, births and episode ends."""
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import MOVES, OBSERVED, StagHuntRulePrey
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.geometry import Vector
+from stag_hunt_rule_prey.environment import MOVES, OBSERVED, StagHuntRulePrey
+from stag_hunt_rule_prey.geometry import Vector
 
 STOP = MOVES - 1  # speed 0
 
@@ -224,7 +224,7 @@ def test_alive_reward_settings_are_validated(settings):
 
 
 def test_alive_arms_set_reward_episodes_and_gamma():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.launchers.calibration import ARMS, PPO_ARMS
+    from stag_hunt_rule_prey.launchers.calibration import ARMS, PPO_ARMS
 
     for arm, shared in (("alive_individual", False), ("alive_shared", True)):
         assert ARMS[arm]["truncate_on_prey_extinction"] is False and ARMS[arm]["reproduction_predator_reward"] == 0.0

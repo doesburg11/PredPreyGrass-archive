@@ -2,7 +2,7 @@
 config/config_env.py and config/config_ppo.py except for ARMS. Run from the
 repository root, e.g. under systemd-run --user:
 
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/launchers/calibration.py \\
+    python -m stag_hunt_rule_prey.launchers.calibration \\
         ARM [ITERATIONS] [ENV_RUNNERS]
 
 Output: runs/calibration_<arm>/ (refuses to overwrite).
@@ -10,8 +10,8 @@ Output: runs/calibration_<arm>/ (refuses to overwrite).
 
 import sys
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey import train
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.config.config_ppo import RUNS_DIR
+from stag_hunt_rule_prey import train
+from stag_hunt_rule_prey.config.config_ppo import RUNS_DIR
 
 WHOLE_EPISODES = {"truncate_on_prey_extinction": False, "reproduction_predator_reward": 0.0}
 

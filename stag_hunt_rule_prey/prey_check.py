@@ -6,7 +6,7 @@ all of this; this only checks the prey before training anything.
 
 --set replaces settings, e.g. --set grass_respawn_delay=800.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.prey_check \\
+    python -m stag_hunt_rule_prey.prey_check \\
         <episodes> [out.json] [--set KEY=VALUE ...] [--workers N]
 """
 
@@ -19,7 +19,7 @@ from pathlib import Path
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import MOVES, StagHuntRulePrey
+from stag_hunt_rule_prey.environment import MOVES, StagHuntRulePrey
 
 STRETCH = 1000  # physics steps
 STOP = MOVES - 1

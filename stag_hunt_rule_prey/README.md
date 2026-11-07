@@ -1,9 +1,11 @@
 # stag_hunt_rule_prey
 
+> **Archived 2026-11-07** from PredPreyGrass (`predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/`): mostly null. With rule-following rabbits and mammoths, hunters learned to hunt in groups easily but never learned restraint, and no setting gave coexistence with cooperation above chance (RESULTS.md section 15). The one passing world of the line came later, in [`stag_hunt_continuous`](../stag_hunt_continuous/README.md)'s RESULTS.md section 8, and continues as [`deer_stag_hunt`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt/README.md) in the main repository. Commands below run from the PredPreyGrass-archive root with the main PredPreyGrass project installed. Saved results and run snapshots still name the old paths.
+
 **Status (2026-11-06): closed, together with the whole stag hunt line.** See
 [RESULTS.md](RESULTS.md), section 15. Only hunters learn; rabbits and mammoths follow
 fixed rules. A simplification of
-[`stag_hunt_continuous`](https://github.com/doesburg11/PredPreyGrass-archive/blob/main/stag_hunt_continuous/README.md) (archived), whose 20 calibration
+[`stag_hunt_continuous`](../stag_hunt_continuous/README.md), whose 20 calibration
 rounds are the background.
 
 ## Why
@@ -104,6 +106,6 @@ restraint was never learned, and leaving prey for later may be a commons dilemma
 
 Run from the repository root, for example:
 
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/launchers/calibration.py base 1000 14
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.evaluate <checkpoint> 50 out.json --workers 16
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.watch <checkpoint> --video out.mp4
+    python -m stag_hunt_rule_prey.launchers.calibration base 1000 14
+    python -m stag_hunt_rule_prey.evaluate <checkpoint> 50 out.json --workers 16
+    python -m stag_hunt_rule_prey.watch <checkpoint> --video out.mp4

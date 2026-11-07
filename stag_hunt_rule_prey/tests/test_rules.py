@@ -6,9 +6,9 @@ import numpy as np
 
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import StagHuntRulePrey
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.geometry import Vector, direction_vector
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.rules import DIRECTIONS, FULL, HALF, STOPPED, direction_towards, move_of, prey_move
+from stag_hunt_rule_prey.environment import StagHuntRulePrey
+from stag_hunt_rule_prey.geometry import Vector, direction_vector
+from stag_hunt_rule_prey.rules import DIRECTIONS, FULL, HALF, STOPPED, direction_towards, move_of, prey_move
 
 
 class NoDraws:

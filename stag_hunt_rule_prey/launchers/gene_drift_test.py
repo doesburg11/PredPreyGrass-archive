@@ -4,7 +4,7 @@ each run, each lineage's mean gene in its pool at the checkpoint
 Mann-Whitney U. Passes if at least one gene has p < 0.025 (0.05, Bonferroni
 over the two genes). Run from the repository root:
 
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/launchers/gene_drift_test.py \\
+    python -m stag_hunt_rule_prey.launchers.gene_drift_test \\
         EVOLVING_CHECKPOINT EVOLVING_POOL_DIR NEUTRAL_CHECKPOINT NEUTRAL_POOL_DIR [OUT]
 """
 
@@ -15,8 +15,8 @@ import sys
 import numpy as np
 from scipy.stats import mannwhitneyu
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import GENES
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.launchers.gene_pools import load_pools
+from stag_hunt_rule_prey.environment import GENES
+from stag_hunt_rule_prey.launchers.gene_pools import load_pools
 
 ALPHA = 0.05 / len(GENES)
 BASE = {"flee": 120.0, "breeding": 8.0}  # the base phenotypes (config_env)

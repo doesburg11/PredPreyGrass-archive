@@ -7,7 +7,7 @@ import sys
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey import evaluate
+from stag_hunt_rule_prey import evaluate
 
 COUNTS = (
     "predator_count", "rabbit_count", "mammoth_count",
@@ -30,7 +30,7 @@ def scaled(config, factor):
 def init(checkpoint, factor):
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.checkpoints import (
+    from stag_hunt_rule_prey.checkpoints import (
         checkpoint_env_config,
         load_modules,
     )

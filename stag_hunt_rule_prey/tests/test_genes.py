@@ -5,9 +5,9 @@ import math
 
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey import rules
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.environment import StagHuntRulePrey
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.geometry import Vector
+from stag_hunt_rule_prey import rules
+from stag_hunt_rule_prey.environment import StagHuntRulePrey
+from stag_hunt_rule_prey.geometry import Vector
 
 GENES = dict(rabbit_genes=True, mammoth_count=0, steppe_count=0, grass_count=0)
 
@@ -134,7 +134,7 @@ def test_each_episode_end_is_logged(tmp_path):
 
 
 def test_load_pools_takes_each_lineages_last_pool(tmp_path):
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.launchers.gene_pools import load_pools, use_pool
+    from stag_hunt_rule_prey.launchers.gene_pools import load_pools, use_pool
 
     (tmp_path / "pool_a.jsonl").write_text(
         json.dumps({"time": 1.0, "genomes": [[0.1, 0.1]]}) + "\n" + json.dumps({"time": 2.0, "genomes": [[0.2, 0.2]]}) + "\n" + json.dumps({"time": 3.0, "genomes": []}) + "\n"
@@ -191,7 +191,7 @@ def test_gene_settings_are_validated(settings):
 
 
 def test_gene_arms_start_from_the_lean_fat_weights_and_differ_only_in_expression():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_rule_prey.launchers.calibration import ARMS, PPO_ARMS
+    from stag_hunt_rule_prey.launchers.calibration import ARMS, PPO_ARMS
 
     evolving, neutral = dict(ARMS["evolving_rabbits"]), dict(ARMS["neutral_rabbits"])
     assert evolving.pop("rabbit_gene_log") != neutral.pop("rabbit_gene_log")
