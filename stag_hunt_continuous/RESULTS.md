@@ -6,20 +6,20 @@ Calibration only, one seed per arm, no confirmatory test (see the
 ## 1. Where it ended
 
 Calibration stopped on 2026-11-05 after 20 rounds, with the target not met, and the
-work continues in [`../stag_hunt_rule_prey/`](../stag_hunt_rule_prey/README.md).
+work continues in [`stag_hunt_rule_prey`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/README.md).
 Section 2 gives the reasons, section 3 the rounds in brief, section 4 the full log
 and analyses.
 
 The follow-up with rule-following prey was also stopped on 2026-11-05, and the stag
 hunt line was closed on 2026-11-06 (see
-[`../stag_hunt_rule_prey/RESULTS.md`](../stag_hunt_rule_prey/RESULTS.md), section 15). Across both modules, about 25 runs, one seed each, the
+[`stag_hunt_rule_prey/RESULTS.md`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/RESULTS.md), section 15). Across both modules, about 25 runs, one seed each, the
 results lay along one trade-off: hunters cooperated strongly where they could
 overrun the prey, and coexisted with it where they had little need to cooperate
 (round 20, with spaced births: 50 of 50, mammoths 7%, joint arrivals at chance). No
 setting gave both. One reading, not tested: as in the classic stag hunt, hunters
 settle on the safe solo prey when it is plentiful, and turned to mammoths only under
 a scarcity that this world could not sustain. See
-[`../stag_hunt_rule_prey/RESULTS.md`](../stag_hunt_rule_prey/RESULTS.md), section 9.
+[`stag_hunt_rule_prey/RESULTS.md`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/RESULTS.md), section 9.
 
 ## 2. Why each round, and why the trail stopped
 
@@ -64,7 +64,7 @@ leading nowhere, and each new setting made the results harder to interpret.
 
 **Why rule-following prey.** The alternatives were to give hunters larger
 brains or prey smaller ones, and the user chose simpler prey
-([`../stag_hunt_rule_prey/`](../stag_hunt_rule_prey/README.md)), because:
+([`stag_hunt_rule_prey`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/README.md)), because:
 
 - All three species here have the same network, though human brains are far
   more developed than a rabbit's or a mammoth's.
@@ -467,7 +467,7 @@ terminated and truncated; it is now terminated only.
 
 At the user's request, after the stag hunt line was closed: one more run, the
 lean-and-fat world of
-[`../stag_hunt_rule_prey/RESULTS.md`](../stag_hunt_rule_prey/RESULTS.md) (sections
+[`stag_hunt_rule_prey/RESULTS.md`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/RESULTS.md) (sections
 11 and 12), but with hunters and rabbits both learning, and round 1a as the comparison.
 
 **World (arm `lean_fat_learning`, `launchers/calibration.py`):** round 1a unchanged

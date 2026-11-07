@@ -6,11 +6,11 @@ import math
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.checkpoints import checkpoint_env_config
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import DEFAULT_CONFIG, MOVES, PARTY_SIZES, StagHuntContinuous, species_of
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.geometry import Vector
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.grass import Grass
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.seasons import PHASES, cycle_phase, play_episode, summarise
+from stag_hunt_continuous.checkpoints import checkpoint_env_config
+from stag_hunt_continuous.environment import DEFAULT_CONFIG, MOVES, PARTY_SIZES, StagHuntContinuous, species_of
+from stag_hunt_continuous.geometry import Vector
+from stag_hunt_continuous.grass import Grass
+from stag_hunt_continuous.seasons import PHASES, cycle_phase, play_episode, summarise
 
 
 def random_policy(seed):

@@ -13,7 +13,7 @@ seasonal world does to policies trained with or without them (observations do
 not change). Such policies never trained in that world. --rabbits replaces
 the number of rabbits at the start.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.seasons \\
+    python -m stag_hunt_continuous.seasons \\
         <checkpoint dir> <episodes> [out.json] [--period P] [--amplitude A] [--start S] [--rabbits R] [--skip-cycles N] [--workers N]
 """
 
@@ -23,8 +23,8 @@ from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
 from pathlib import Path
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import evaluate
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import PARTY_SIZES, StagHuntContinuous
+from stag_hunt_continuous import evaluate
+from stag_hunt_continuous.environment import PARTY_SIZES, StagHuntContinuous
 
 PHASES = 8
 COUNTERS = (
@@ -163,7 +163,7 @@ def summarise(rows, skip_cycles=1):
 def _init(checkpoint, period, amplitude, start, rabbits):
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.checkpoints import checkpoint_env_config, load_modules
+    from stag_hunt_continuous.checkpoints import checkpoint_env_config, load_modules
 
     torch.set_num_threads(1)
     config = checkpoint_env_config(checkpoint)

@@ -51,8 +51,8 @@ from gymnasium.spaces import Box, Dict, Discrete, MultiDiscrete
 from ray.rllib.env.multi_agent_env import MultiAgentEnv
 from ray.tune.registry import register_env
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.geometry import Torus, Vector, direction_vector, heading_degrees
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.grass import Grass
+from stag_hunt_continuous.geometry import Torus, Vector, direction_vector, heading_degrees
+from stag_hunt_continuous.grass import Grass
 
 ENV_NAME = "predpreygrass_stag_hunt_continuous"
 SPECIES = ("predator", "rabbit", "mammoth")

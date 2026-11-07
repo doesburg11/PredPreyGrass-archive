@@ -1,10 +1,12 @@
 # stag_hunt_continuous
 
+> **Archived 2026-11-07** from PredPreyGrass (`predpreygrass/non_evolutionary/continuous_space/stag_hunt_continuous/`): mostly null. The mammoth stag hunt (rounds 1-20) never gave coexistence and cooperation together; of the lean/fat rabbit follow-ups (RESULTS sections 5-8) only section 8, one run, met both. That world continues, stripped of calls and mammoths, as [`deer_stag_hunt`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt/README.md) in the main repository. Commands below run from the PredPreyGrass-archive root with the main PredPreyGrass project installed. Saved results and run snapshots still name the old paths.
+
 **Status (2026-11-05): stopped, target not met.** Calibration stopped after 20
 rounds, and the follow-up with rule-following prey,
-[`../stag_hunt_rule_prey/`](../stag_hunt_rule_prey/README.md), was stopped the same
+[`stag_hunt_rule_prey`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/README.md), was stopped the same
 day. The stag hunt line as a whole was closed on 2026-11-06, with a closing summary in
-[`../stag_hunt_rule_prey/RESULTS.md`](../stag_hunt_rule_prey/RESULTS.md), section 15. Details of every round,
+[`stag_hunt_rule_prey/RESULTS.md`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey/RESULTS.md), section 15. Details of every round,
 the reasons for each change and for stopping are in [RESULTS.md](RESULTS.md).
 
 **One more run (2026-11-06, RESULTS section 5):** lean and fat rabbits with both
@@ -33,13 +35,13 @@ is whether hunters learn to hunt together, and whether cooperation,
 solo hunting or free-riding pays.
 
 It transfers the discrete
-[`stag_hunt_forward_view`](../../discrete_space/project_cooperation/stag_hunt_forward_view/README.md)
+[`stag_hunt_forward_view`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/discrete_space/project_cooperation/stag_hunt_forward_view/README.md)
 (there hunters joined hunts more often next to mammoths than next to
 rabbits, and hunters labelled group hunters reproduced more, a descriptive
 result) to the continuous world of
-[`base_environment_continuous`](../base_environment_continuous/README.md),
+[`base_environment_continuous`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/base_environment_continuous/README.md),
 with a capture chance by party size from
-[`predator_bands`](../../discrete_space/predator_bands/README.md), and is
+[`predator_bands`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/discrete_space/predator_bands/README.md), and is
 designed around the reasons the continuous foraging_swarms experiments
 found no learned cooperation (DESIGN.md, section 2).
 
@@ -80,10 +82,10 @@ found no learned cooperation (DESIGN.md, section 2).
 - [`tests/`](tests/): spaces, determinism, catching, food layers, episode
   ends and the hunt rule.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.train
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.evaluate <checkpoint | untrained> 50 out.json
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.watch <checkpoint | untrained> --seed 0
-    python -m pytest predpreygrass/non_evolutionary/continuous_space/stag_hunt_continuous/tests
+    python -m stag_hunt_continuous.train
+    python -m stag_hunt_continuous.evaluate <checkpoint | untrained> 50 out.json
+    python -m stag_hunt_continuous.watch <checkpoint | untrained> --seed 0
+    python -m pytest stag_hunt_continuous/tests
 
 ## TODO
 

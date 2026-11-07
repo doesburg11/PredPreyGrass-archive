@@ -304,6 +304,11 @@
       "source": "/home/doesburg/Projects/PredPreyGrass/predpreygrass/non_evolutionary/continuous_space/foraging_swarms/runs",
       "destination": "/home/doesburg/Projects/PredPreyGrass-archive/foraging_swarms/runs",
       "note": "whole runs/ folder moved 2026-10-23 (14 experiment folders, aborted_3000iter/, logs/); analysis/results/*.json still record the old paths"
+    },
+    {
+      "source": "/home/doesburg/Projects/PredPreyGrass/predpreygrass/non_evolutionary/continuous_space/stag_hunt_continuous/runs",
+      "destination": "/home/doesburg/Projects/PredPreyGrass-archive/stag_hunt_continuous/runs",
+      "note": "whole runs/ folder moved 2026-11-07 (127 entries, 24 GB); results/*.json and runs' source_code snapshots still record the old paths"
     }
   ],
   "unmatched": [

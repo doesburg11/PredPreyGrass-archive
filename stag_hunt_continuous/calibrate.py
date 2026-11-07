@@ -8,11 +8,11 @@ a few rabbit energies. The calibration target (DESIGN.md): a pair hunt worth
 at least twice a rabbit catch per predator, a solo hunt worth less than
 nothing.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.calibrate
+    python -m stag_hunt_continuous.calibrate
 """
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.config.config_env import config_env
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import PARTY_SIZES
+from stag_hunt_continuous.config.config_env import config_env
+from stag_hunt_continuous.environment import PARTY_SIZES
 
 
 def expected_values(config):

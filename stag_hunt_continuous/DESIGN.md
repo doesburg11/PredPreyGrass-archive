@@ -15,7 +15,7 @@ bring about joint hunts of prey that one hunter cannot kill, more than
 chance meetings would, and more than the capture rule alone explains.
 
 Its starting point is the discrete
-[`stag_hunt_forward_view`](../../discrete_space/project_cooperation/stag_hunt_forward_view/README.md),
+[`stag_hunt_forward_view`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/discrete_space/project_cooperation/stag_hunt_forward_view/README.md),
 which keeps three elements that resemble human hunting:
 
 1. **A choice between big, risky prey and small, reliable prey** (the stag
@@ -68,7 +68,7 @@ Requirements that follow:
 
 ## 3. World
 
-A copy of [`base_environment_continuous`](../base_environment_continuous/README.md)
+A copy of [`base_environment_continuous`](https://github.com/doesburg11/PredPreyGrass/blob/main/predpreygrass/non_evolutionary/continuous_space/base_environment_continuous/README.md)
 with every quirk fixed (`environment.FIXES`, the BE-04/BE-05 world):
 800 × 800 torus, 16 directions × 3 speeds, 8 physics steps per decision,
 energy, starvation, births as the only reward (+10), clustered moving

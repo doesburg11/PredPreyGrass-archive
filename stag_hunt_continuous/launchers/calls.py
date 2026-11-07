@@ -17,7 +17,7 @@ kinds). This is an association: the policy chooses when to call. Also: the
 call rate at such moments against all other hunter decisions.
 
 Run from the repository root:
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_continuous/launchers/calls.py \\
+    python -m stag_hunt_continuous.launchers.calls \\
         CHECKPOINT EPISODES WORKERS [OUT.json] [--set KEY=JSON ...]
 """
 
@@ -27,7 +27,7 @@ import random
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import evaluate
+from stag_hunt_continuous import evaluate
 
 WINDOW = 4  # decisions
 BOOTSTRAP = 5000

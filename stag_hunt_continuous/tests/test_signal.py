@@ -4,10 +4,10 @@ hunters touching them at once (rabbit_fat_touch_only)."""
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import CALL_SIZE, StagHuntContinuous
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.geometry import Vector
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.tests.test_environment import STOP, random_actions, stopped_actions, world
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.tests.test_lean_fat import rabbit_beside
+from stag_hunt_continuous.environment import CALL_SIZE, StagHuntContinuous
+from stag_hunt_continuous.geometry import Vector
+from stag_hunt_continuous.tests.test_environment import STOP, random_actions, stopped_actions, world
+from stag_hunt_continuous.tests.test_lean_fat import rabbit_beside
 
 
 def calling_world(**config):
@@ -127,7 +127,7 @@ def test_settings_are_validated(settings):
 
 
 def test_the_signal_arm_is_r7_with_calls_and_touching():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.calibration import ARMS, INIT_FROM
+    from stag_hunt_continuous.launchers.calibration import ARMS, INIT_FROM
 
     arm = dict(ARMS["lean_fat_r7_signal"])
     assert (arm.pop("hunter_calls"), arm.pop("call_radius"), arm.pop("rabbit_fat_touch_only"), arm.pop("rabbit_touch_window")) == (True, 200.0, True, 8)
@@ -136,7 +136,7 @@ def test_the_signal_arm_is_r7_with_calls_and_touching():
 
 
 def test_calls_summary():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.calls import summarise
+    from stag_hunt_continuous.launchers.calls import summarise
 
     keys = ("decisions", "calls", "alone_at_fat", "alone_at_fat_calls", "call_moments", "call_arrivals", "silent_moments", "silent_arrivals", "censored")
     empty = dict.fromkeys(keys, 0)
@@ -184,7 +184,7 @@ def test_window_zero_needs_touching_in_the_same_step():
 def _run_calls(env, script):
     """Drive launchers.calls.count with a scripted episode: script is a list
     of callables (env) -> action dict, one per decision."""
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers import calls
+    from stag_hunt_continuous.launchers import calls
 
     def play(env, modules, seed):
         for make in script:

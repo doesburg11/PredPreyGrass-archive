@@ -19,7 +19,7 @@ settings of config/config_env.py and config/config_ppo.py except:
 Not confirmatory; the seeds of these runs are not reused. Run from the
 repository root, e.g. under systemd-run --user:
 
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_continuous/launchers/calibration.py \\
+    python -m stag_hunt_continuous.launchers.calibration \\
         ARM [ITERATIONS] [ENV_RUNNERS]
 
 Output: runs/calibration_<arm>/ (refuses to overwrite).
@@ -27,8 +27,8 @@ Output: runs/calibration_<arm>/ (refuses to overwrite).
 
 import sys
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import train
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.config.config_ppo import RUNS_DIR
+from stag_hunt_continuous import train
+from stag_hunt_continuous.config.config_ppo import RUNS_DIR
 
 ARMS = {
     "rabbits_only": {"mammoth_count": 0},

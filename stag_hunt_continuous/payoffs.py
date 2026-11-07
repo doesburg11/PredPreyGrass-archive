@@ -23,7 +23,7 @@ chose. Metabolic cost and rabbit food of a hunter's last decision before it
 starves, and of the episode's last decision, are not counted. Births (the
 parent's whole birth cost, reproduction_predator_cost) are not a cost here.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.payoffs \\
+    python -m stag_hunt_continuous.payoffs \\
         <checkpoint dir> <episodes> [out.json] [--energy-ratio R] [--min-party N] [--workers N]
 
 --energy-ratio and --min-party replace the checkpoint's hunt_energy_ratio and
@@ -38,8 +38,8 @@ from pathlib import Path
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import evaluate
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import PARTY_SIZES, StagHuntContinuous
+from stag_hunt_continuous import evaluate
+from stag_hunt_continuous.environment import PARTY_SIZES, StagHuntContinuous
 
 BOUT_GAP = 2
 GROUPS = ("elsewhere", "near", "touched_no_attempt", "attempted_alone", "attempted_in_party")
@@ -355,7 +355,7 @@ def summarise(rows):
 def _init(checkpoint, energy_ratio=None, min_party=None):
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.checkpoints import checkpoint_env_config, load_modules
+    from stag_hunt_continuous.checkpoints import checkpoint_env_config, load_modules
 
     torch.set_num_threads(1)
     config = checkpoint_env_config(checkpoint)

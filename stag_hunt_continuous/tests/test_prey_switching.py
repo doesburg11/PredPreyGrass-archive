@@ -5,9 +5,9 @@ import math
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import MOVES, StagHuntContinuous, species_of
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.geometry import Vector, heading_degrees
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.prey_switching import (
+from stag_hunt_continuous.environment import MOVES, StagHuntContinuous, species_of
+from stag_hunt_continuous.geometry import Vector, heading_degrees
+from stag_hunt_continuous.prey_switching import (
     bin_rates,
     diet_slope,
     new_bins,

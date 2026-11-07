@@ -2,13 +2,13 @@
 (policies unchanged), and measure the fair cooperation share (RESULTS section 8.1).
 
 Run from the repository root:
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_continuous/launchers/silence_calls.py CHECKPOINT SILENCE(0/1) EPISODES OUT.json"""
+    python -m stag_hunt_continuous.launchers.silence_calls CHECKPOINT SILENCE(0/1) EPISODES OUT.json"""
 import json, sys
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import evaluate
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers import coop_fair
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import CALL_SIZE
+from stag_hunt_continuous import evaluate
+from stag_hunt_continuous.launchers import coop_fair
+from stag_hunt_continuous.environment import CALL_SIZE
 
 
 def init(checkpoint, silence):

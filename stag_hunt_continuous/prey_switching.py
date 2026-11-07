@@ -31,7 +31,7 @@ processes, so it is not an individual's choice between prey.
 Intervals resample whole episodes; compare checkpoints by pairing seeds, not
 by these separate intervals.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.prey_switching \\
+    python -m stag_hunt_continuous.prey_switching \\
         <checkpoint dir | untrained> <episodes> [out.json] [--workers N]
 """
 
@@ -44,8 +44,8 @@ from pathlib import Path
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import evaluate
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import PARTY_SIZES
+from stag_hunt_continuous import evaluate
+from stag_hunt_continuous.environment import PARTY_SIZES
 
 RABBIT_BINS = ((1, 5), (6, 10), (11, 20), (21, 40), (41, 70), (71, None))
 BOOTSTRAPS = 2000

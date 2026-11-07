@@ -4,8 +4,8 @@ import random
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import MOVES, StagHuntContinuous, species_of
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.evaluate import joint_arrivals, outcome, shifted
+from stag_hunt_continuous.environment import MOVES, StagHuntContinuous, species_of
+from stag_hunt_continuous.evaluate import joint_arrivals, outcome, shifted
 
 
 def test_joint_arrivals_on_tracks():
@@ -110,8 +110,8 @@ def test_tracked_count_with_births_kills_and_an_ending():
 
 
 def test_evaluation_plays_whole_episodes(monkeypatch):
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import checkpoints, evaluate
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import DEFAULT_CONFIG
+    from stag_hunt_continuous import checkpoints, evaluate
+    from stag_hunt_continuous.environment import DEFAULT_CONFIG
 
     monkeypatch.setattr(checkpoints, "checkpoint_env_config", lambda checkpoint: dict(DEFAULT_CONFIG, truncate_on_prey_extinction=True))
     monkeypatch.setattr(checkpoints, "load_modules", lambda checkpoint: {})
@@ -121,8 +121,8 @@ def test_evaluation_plays_whole_episodes(monkeypatch):
 
 
 def test_summary_has_hunt_energy_means():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import evaluate
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import new_hunt_stats
+    from stag_hunt_continuous import evaluate
+    from stag_hunt_continuous.environment import new_hunt_stats
 
     stats = new_hunt_stats()
     stats.update(hunts_party_2=2, hunted_party_energy_total=30.0, hunted_mammoth_energy_total=24.0)

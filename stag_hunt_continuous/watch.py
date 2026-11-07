@@ -5,7 +5,7 @@ Actions are sampled as in training and as evaluate.py samples them (one
 torch generator seeded with the episode's seed), so an episode watched
 here is the same as evaluate.py's episode with that seed.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.watch \\
+    python -m stag_hunt_continuous.watch \\
         <checkpoint dir | untrained> [--seed N] [--video out.mp4] [--fps N]
 
 On a machine without a display, set SDL_VIDEODRIVER=dummy with --video.
@@ -16,10 +16,10 @@ import argparse
 import numpy as np
 import torch
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.checkpoints import checkpoint_env_config, load_modules, untrained_modules
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import StagHuntContinuous
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.evaluate import sample_actions
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.render import Viewer
+from stag_hunt_continuous.checkpoints import checkpoint_env_config, load_modules, untrained_modules
+from stag_hunt_continuous.environment import StagHuntContinuous
+from stag_hunt_continuous.evaluate import sample_actions
+from stag_hunt_continuous.render import Viewer
 
 
 class VideoWriter:
@@ -52,7 +52,7 @@ def main():
     args = parser.parse_args()
     torch.set_num_threads(1)
     if args.checkpoint == "untrained":
-        from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.config.config_env import config_env
+        from stag_hunt_continuous.config.config_env import config_env
 
         config = dict(config_env)
         modules = untrained_modules(config, seed=0)

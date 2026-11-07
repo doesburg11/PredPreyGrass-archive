@@ -3,8 +3,8 @@
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import DEFAULT_CONFIG, MOVES, PARTY_SIZES, StagHuntContinuous, species_of
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.payoffs import (
+from stag_hunt_continuous.environment import DEFAULT_CONFIG, MOVES, PARTY_SIZES, StagHuntContinuous, species_of
+from stag_hunt_continuous.payoffs import (
     GROUPS,
     add_life,
     approach_start,

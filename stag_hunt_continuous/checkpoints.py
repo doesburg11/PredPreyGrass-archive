@@ -5,7 +5,7 @@ import json
 import pickle
 from pathlib import Path
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import DEFAULT_CONFIG, SPECIES, StagHuntContinuous
+from stag_hunt_continuous.environment import DEFAULT_CONFIG, SPECIES, StagHuntContinuous
 
 # Settings added after runs were saved, with the value that gives the
 # behaviour those runs had; filled in when a saved env_config lacks them.

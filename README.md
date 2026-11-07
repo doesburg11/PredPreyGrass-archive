@@ -18,6 +18,28 @@ present, `RESULTS.md` before interpreting its status.
 
 ## What's here
 
+### [`stag_hunt_continuous`](stag_hunt_continuous/) — a learned stag hunt in the continuous world (archived 2026-11-07)
+
+Hunters (standing for humans), rabbits and mammoths in the continuous
+Predator-Prey-Grass world, all learning with shared PPO and rewarded only for
+births: could hunters live on rabbits alone but learn to hunt mammoths
+together for more? Over 20 calibration rounds the results lay along one
+trade-off: strong group hunting came only where hunters overran the prey,
+and coexistence only where they had little need to cooperate. Follow-ups
+with lean and fat rabbits and no mammoths (`RESULTS.md` sections 5-8) met
+coexistence and cooperation above chance only in section 8 (one run: fat
+rabbits catchable only by two hunters touching together, 49 of 50 episodes,
+partner share 1.18x chance; the hunters' calls unused). Mostly null; section
+8's world, stripped of calls and mammoths, continues in the main repository
+as [`deer_stag_hunt`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/deer_stag_hunt),
+and its follow-up with rule-following prey,
+[`stag_hunt_rule_prey`](https://github.com/doesburg11/PredPreyGrass/tree/main/predpreygrass/non_evolutionary/continuous_space/stag_hunt_rule_prey),
+is still there too. Write-up: [The Stag Hunt and Restraint](https://humanbehaviorpatterns.org/learning-selection-interaction/predpreygrass-continuous/stag-hunt).
+Moved with its history (`git subtree split`). Run from this repository's root
+with the main `PredPreyGrass` project installed, e.g.
+`python -m stag_hunt_continuous.evaluate ...`; tests:
+`python -m pytest stag_hunt_continuous/tests` (225 pass).
+
 ### [`foraging_swarms`](foraging_swarms/) — learned cooperation in the continuous world (archived 2026-10-23)
 
 A search for emergent swarming and cooperative hunting in the continuous
@@ -190,6 +212,8 @@ independent evolutionary-discovery objective reached no dependable remedy.
 The positive ERL Baldwin and coevolution modules remain in the main repository.
 `foraging_swarms` is a non-evolutionary module (shared PPO only) archived as a
 controlled null.
+`stag_hunt_continuous` is a non-evolutionary module whose one passing world
+(a single run) was carried forward into a new module; the rest was null.
 `eco_evolutionary_social_preference` is a fixed-policy proof of concept whose
 behavioural effect held but whose fitness benefit was not established.
 
@@ -208,7 +232,7 @@ directory. Evaluation defaults to the newest standard-treatment experiment with
 an available RLlib module checkpoint; control, fixed-trait, and scaled runs must
 be selected explicitly using the evaluator’s checkpoint override. Existing
 PredPreyGrass runtime dependencies are still required. Run data is ignored by
-Git; `runs-migration.json` records the 76 moves and three unmatched directories
+Git; `runs-migration.json` records the 77 moves and three unmatched directories
 left at their original location.
 
 | Module | Local runs | Associated experiment folders |
@@ -223,3 +247,4 @@ left at their original location.
 | `eco_evolutionary_metabolic_rate` | [`eco_evolutionary_metabolic_rate/runs/`](eco_evolutionary_metabolic_rate/runs/) | 17 |
 | `eco_evolutionary_nuptial_gift` | [`eco_evolutionary_nuptial_gift/runs/`](eco_evolutionary_nuptial_gift/runs/) | 12 |
 | `foraging_swarms` | [`foraging_swarms/runs/`](foraging_swarms/runs/) | 14 |
+| `stag_hunt_continuous` | [`stag_hunt_continuous/runs/`](stag_hunt_continuous/runs/) | 127 |

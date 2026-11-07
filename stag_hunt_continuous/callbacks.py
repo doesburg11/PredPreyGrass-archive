@@ -3,7 +3,7 @@ catch and join counters (environment.new_hunt_stats) and derived rates."""
 
 from ray.rllib.callbacks.callbacks import RLlibCallback
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import PARTY_SIZES
+from stag_hunt_continuous.environment import PARTY_SIZES
 
 
 def _unwrapped(env, env_index):

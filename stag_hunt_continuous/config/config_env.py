@@ -5,6 +5,6 @@ not there. Values marked "calibrate" in DESIGN.md are set in the
 calibration step (DESIGN.md, section 5).
 """
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import DEFAULT_CONFIG
+from stag_hunt_continuous.environment import DEFAULT_CONFIG
 
 config_env = dict(DEFAULT_CONFIG)

@@ -12,7 +12,7 @@ Cooperation is shown if approaches to fat rabbits have a partner near more
 often than approaches to lean rabbits and than chance (RESULTS.md, section 5).
 
 Run from the repository root:
-    python predpreygrass/non_evolutionary/continuous_space/stag_hunt_continuous/launchers/coop_fair.py \\
+    python -m stag_hunt_continuous.launchers.coop_fair \\
         CHECKPOINT EPISODES WORKERS [OUT.json] [--set KEY=JSON ...]
 
 --set as in evaluate.py, e.g. --set rabbit_fat_energy=6.0 for policies trained
@@ -24,7 +24,7 @@ import json
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import evaluate
+from stag_hunt_continuous import evaluate
 
 GAP = 64  # physics steps
 KINDS = ("lean", "middle", "fat")

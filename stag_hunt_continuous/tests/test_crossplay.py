@@ -3,9 +3,9 @@
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.crossplay import cell_modules, cells, paired_ratio, same_episode, same_world, summarise_cell
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import MOVES, SPECIES, StagHuntContinuous, new_hunt_stats, species_of
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.prey_switching import new_bins, play_episode
+from stag_hunt_continuous.crossplay import cell_modules, cells, paired_ratio, same_episode, same_world, summarise_cell
+from stag_hunt_continuous.environment import MOVES, SPECIES, StagHuntContinuous, new_hunt_stats, species_of
+from stag_hunt_continuous.prey_switching import new_bins, play_episode
 
 
 def test_every_assignment_once():

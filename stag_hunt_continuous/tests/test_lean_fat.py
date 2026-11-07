@@ -5,9 +5,9 @@ stag_hunt_rule_prey."""
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import StagHuntContinuous
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.geometry import Vector
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.tests.test_environment import random_actions, stopped_actions, world
+from stag_hunt_continuous.environment import StagHuntContinuous
+from stag_hunt_continuous.geometry import Vector
+from stag_hunt_continuous.tests.test_environment import random_actions, stopped_actions, world
 
 
 def rabbit_beside(env, *numbers, energy):
@@ -131,7 +131,7 @@ def test_lean_and_fat_settings_are_validated(settings):
 
 
 def test_the_arm_is_round_1a_with_the_rule():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.calibration import ARMS, INIT_FROM
+    from stag_hunt_continuous.launchers.calibration import ARMS, INIT_FROM
 
     arm = dict(ARMS["lean_fat_learning"])
     assert arm.pop("rabbit_fat_energy") == 6.0 and arm.pop("observe_rabbit_condition") is True
@@ -156,7 +156,7 @@ def test_a_middle_rabbit_is_caught_alone_by_chance_from_its_own_seeded_stream():
 
 
 def test_coop_fair_summary_handles_empty_counts():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.coop_fair import KINDS, summarise
+    from stag_hunt_continuous.launchers.coop_fair import KINDS, summarise
 
     row = {"hunter_steps": 0, "with_partner": 0, **{f"{k}_{x}": 0 for k in KINDS for x in ("approaches", "with_partner")}}
     s = summarise([row])
@@ -167,7 +167,7 @@ def test_coop_fair_summary_handles_empty_counts():
 
 
 def test_the_big_rabbit_arm_is_the_lean_fat_arm_with_bigger_fat_rabbits():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.calibration import ARMS, INIT_FROM
+    from stag_hunt_continuous.launchers.calibration import ARMS, INIT_FROM
 
     arm = dict(ARMS["lean_fat_big"])
     assert arm.pop("reproduction_rabbit_threshold") == 16.0 and arm.pop("rabbit_fat_energy") == 12.0
@@ -213,7 +213,7 @@ def test_the_birth_cost_is_validated_for_every_species(species):
 
 
 def test_the_r7_arm_is_the_lean_fat_arm_with_the_users_rabbit_energies():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.calibration import ARMS, INIT_FROM
+    from stag_hunt_continuous.launchers.calibration import ARMS, INIT_FROM
 
     arm = dict(ARMS["lean_fat_r7"])
     changed = {k: arm.pop(k) for k in ("energy_rabbit_initial", "reproduction_rabbit_threshold", "reproduction_rabbit_cost", "rabbit_lean_energy", "rabbit_fat_energy")}

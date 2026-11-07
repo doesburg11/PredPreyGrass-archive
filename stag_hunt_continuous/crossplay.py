@@ -8,7 +8,7 @@ The policies never trained against the mixed partners: a cell shows how
 these policies meet, not what would have been learned together, and a
 population that cannot cope may collapse for that reason alone.
 
-    python -m predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.crossplay \\
+    python -m stag_hunt_continuous.crossplay \\
         <checkpoint A> <checkpoint B> <episodes> [out.json] [--workers N]
 """
 
@@ -23,8 +23,8 @@ from pathlib import Path
 
 import numpy as np
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous import evaluate, prey_switching
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import SPECIES, StagHuntContinuous
+from stag_hunt_continuous import evaluate, prey_switching
+from stag_hunt_continuous.environment import SPECIES, StagHuntContinuous
 
 SOURCES = ("A", "B")
 # Rabbit-count bins of the printed rates and the paired contrasts.
@@ -53,7 +53,7 @@ def same_world(config_a, config_b):
 def _init(checkpoint_a, checkpoint_b):
     import torch
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.checkpoints import checkpoint_env_config, load_modules
+    from stag_hunt_continuous.checkpoints import checkpoint_env_config, load_modules
 
     torch.set_num_threads(1)
     config = dict(same_world(checkpoint_env_config(checkpoint_a), checkpoint_env_config(checkpoint_b)))

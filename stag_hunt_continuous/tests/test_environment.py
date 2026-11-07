@@ -4,7 +4,7 @@ catching, food layers, episode ends and the hunt rule (DESIGN.md, 3.2)."""
 import numpy as np
 import pytest
 
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import (
+from stag_hunt_continuous.environment import (
     BURROW_SIZE,
     EXIT_WINDOW,
     MOVES,
@@ -14,8 +14,8 @@ from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.enviro
     StagHuntContinuous,
     species_of,
 )
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.callbacks import derived_rates
-from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.geometry import Vector, heading_degrees
+from stag_hunt_continuous.callbacks import derived_rates
+from stag_hunt_continuous.geometry import Vector, heading_degrees
 
 STOP = MOVES - 1  # speed 0
 
@@ -397,8 +397,8 @@ def test_old_checkpoint_settings_get_added_settings(tmp_path):
     import json
     import pickle
 
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.checkpoints import ADDED_SETTINGS, checkpoint_env_config
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import DEFAULT_CONFIG
+    from stag_hunt_continuous.checkpoints import ADDED_SETTINGS, checkpoint_env_config
+    from stag_hunt_continuous.environment import DEFAULT_CONFIG
 
     old = {k: v for k, v in DEFAULT_CONFIG.items() if k not in ADDED_SETTINGS}
     checkpoint = tmp_path / "checkpoint"
@@ -471,9 +471,9 @@ def test_time_limit():
 
 
 def test_expected_values_and_rates():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.calibrate import expected_values
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.callbacks import derived_rates
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.environment import DEFAULT_CONFIG, new_hunt_stats
+    from stag_hunt_continuous.calibrate import expected_values
+    from stag_hunt_continuous.callbacks import derived_rates
+    from stag_hunt_continuous.environment import DEFAULT_CONFIG, new_hunt_stats
 
     rows = expected_values(DEFAULT_CONFIG)
     # A solo hunt never succeeds: it costs the join cost and the struggle.
@@ -666,7 +666,7 @@ def test_burrows_wrap_around_the_torus():
     env.step(stopped_actions(env))
     assert env.rabbits and env.hunt_stats["catches_blocked"] > 0
     np.testing.assert_allclose(env._observe(env.rabbits[0])[45:49], [10 / 267, 0.0, 10 / 267, 1.0], atol=1e-6)
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.grass import GrassPatch
+    from stag_hunt_continuous.grass import GrassPatch
 
     grass = env.food["grass"]
     grass.set_burrows([Vector(5.0, 400.0)], 24.0)
@@ -791,8 +791,8 @@ def test_cluster_warrens_follow_the_cluster_count():
 
 
 def test_calibration_arms_build():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.config.config_env import config_env
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.calibration import ARMS
+    from stag_hunt_continuous.config.config_env import config_env
+    from stag_hunt_continuous.launchers.calibration import ARMS
 
     for settings in ARMS.values():
         StagHuntContinuous({**config_env, **settings})
@@ -859,7 +859,7 @@ def test_hidden_rabbit_observation_sizes(config, size):
 
 
 def test_hidden_check_arm_differs_only_in_hiding():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.calibration import ARMS
+    from stag_hunt_continuous.launchers.calibration import ARMS
 
     shown, hidden = ARMS["rabbits_only_warrens"], ARMS["rabbits_only_warrens_hidden"]
     assert {k: v for k, v in hidden.items() if shown.get(k) != v} == {"burrow_hides_rabbits": True}
@@ -961,7 +961,7 @@ def test_without_condition_the_old_chance_and_one_draw(draw, killed):
 
 
 def test_condition_means():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.callbacks import derived_rates
+    from stag_hunt_continuous.callbacks import derived_rates
 
     env = world(hunt_success_by_party=(1.0, 1.0, 1.0, 1.0), hunt_condition_factor=1.0)
     env.mammoths[0].energy, env.mammoths[1].energy = 24.0, 6.0  # condition 1 (never killed), 0.25
@@ -1063,8 +1063,8 @@ def test_energy_rule_settings_are_checked():
 
 
 def test_energy_rule_episode_runs():
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.config.config_env import config_env
-    from predpreygrass.non_evolutionary.continuous_space.stag_hunt_continuous.launchers.calibration import ARMS
+    from stag_hunt_continuous.config.config_env import config_env
+    from stag_hunt_continuous.launchers.calibration import ARMS
 
     env = StagHuntContinuous({**config_env, **ARMS["with_mammoths_r13a"]})
     obs, _ = env.reset(seed=4)
